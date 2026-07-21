@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammad Elhafi — Cybersecurity · Web · AI</title>
+<meta name="description" content="Mohammad Elhafi — cybersecurity analyst, web developer and AI creator based in Dubai. Founder of Klyro.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231a1611'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-style='italic' font-size='16' fill='%23f4eee2' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600;700&family=Fragment+Mono&family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== top bar ===================== -->
+<header class="topbar">
+  <span class="mono tb-left" data-i18n="tb.loc">Dubai, UAE — 25.2°N 55.3°E</span>
+  <nav class="tb-nav">
+    <a href="#work" data-i18n="nav.work">Work</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <button id="langToggle" class="mono lang-btn"><span class="on" data-lang="en">EN</span><span class="sep">/</span><span data-lang="ar">عربي</span></button>
+</header>
+
+<!-- ===================== hero ===================== -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="kicker mono reveal"><span class="dot"></span><span data-i18n="hero.kicker">Open for projects — worldwide</span></p>
+    <h1 class="display reveal">
+      <span class="line" data-i18n="hero.l1">Cybersecurity,</span>
+      <span class="line"><em data-i18n="hero.l2">design</em><span data-i18n="hero.amp"> &amp; </span><span class="accent" data-i18n="hero.l3">AI.</span></span>
+    </h1>
+    <p class="hero-sub reveal" data-i18n="hero.sub">I'm Mohammad Elhafi — founder of Klyro, cybersecurity student in Dubai, and the person businesses call when they want a website that actually wins customers.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-ink" id="waLink" href="#" data-i18n="cta.start">Start a project ↗</a>
+      <a class="btn btn-line" href="#work" data-i18n="cta.work">See the work ↓</a>
+    </div>
+    <ul class="hero-social mono reveal">
+      <li><a href="https://www.instagram.com/mohammad.elhafi/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@mohammad_elhafi" target="_blank" rel="noopener">TikTok</a></li>
+      <li><a href="https://www.youtube.com/@Mohammad_Elhafi" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.linkedin.com/in/mohammad-elhafi/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/Rabee-12" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+
+  <figure class="hero-photo reveal">
+    <div class="arch">
+      <img src="assets/me-hero.webp" alt="Mohammad Elhafi at the Bosphorus, Istanbul" fetchpriority="high">
+    </div>
+    <div class="stamp mono" aria-hidden="true"><span data-i18n="hero.stamp1">Founder</span><b>Klyro</b><span data-i18n="hero.stamp2">Est. Dubai</span></div>
+    <figcaption class="mono" data-i18n="hero.cap">Mohammad Elhafi — cybersecurity analyst · web developer · AI creator</figcaption>
+  </figure>
+</section>
+
+<!-- ===================== ticker ===================== -->
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<!-- ===================== stats ===================== -->
+<section class="stats">
+  <div class="stat reveal"><b class="display">10+</b><span class="mono" data-i18n="stat.1">Projects shipped</span></div>
+  <div class="stat reveal"><b class="display">3</b><span class="mono" data-i18n="stat.2">Languages — EN AR TR</span></div>
+  <div class="stat reveal"><b class="display">2</b><span class="mono" data-i18n="stat.3">Countries served</span></div>
+  <div class="stat reveal"><b class="display">1</b><span class="mono" data-i18n="stat.4">Studio founded — Klyro</span></div>
+</section>
+
+<!-- ===================== work ===================== -->
+<section class="section" id="work">
+  <div class="sec-head reveal">
+    <span class="mono sec-num">01</span>
+    <h2 class="display"><span data-i18n="work.title1">Selected</span> <em data-i18n="work.title2">work</em></h2>
+  </div>
+  <div class="filters mono reveal" id="filters"></div>
+  <div class="work-grid" id="workGrid"></div>
+  <p class="mono work-note reveal" data-i18n="work.note">+ cybersecurity &amp; AI projects joining the shelf soon.</p>
+</section>
+
+<!-- ===================== about ===================== -->
+<section class="section about" id="about">
+  <div class="sec-head reveal">
+    <span class="mono sec-num">02</span>
+    <h2 class="display"><span data-i18n="about.title1">About</span> <em data-i18n="about.title2">me</em></h2>
+  </div>
+  <div class="about-grid">
+    <figure class="about-photo reveal">
+      <div class="arch arch-b"><img src="assets/me-about.jpg" alt="Mohammad Elhafi"></div>
+      <div class="candid">
+        <img src="assets/me-candid.jpg" alt="Mohammad on the phone">
+        <span class="mono" data-i18n="about.cap2">On a call — probably about your project.</span>
+      </div>
+      <figcaption class="mono" data-i18n="about.cap">Off duty — rarely.</figcaption>
+    </figure>
+    <div class="about-copy">
+      <p class="pull display reveal" data-i18n="about.pull">“I believe the web can be <em>safer</em> and <em>more beautiful</em> at the same time.”</p>
+      <p class="reveal" data-i18n="about.p1">I'm a cybersecurity student at the University of Wollongong in Dubai and the founder of Klyro — a studio building bilingual websites for cafés, restaurants and brands across Turkey and the Gulf.</p>
+      <p class="reveal" data-i18n="about.p2">Every site I ship is fast, multilingual — Arabic, English, Turkish — and designed to sell, not just to sit there looking pretty. On the side, I create AI-driven content and tell stories about the tools shaping the future.</p>
+      <h3 class="mono sub reveal" data-i18n="about.skills">Toolbox</h3>
+      <div class="toolbox reveal" id="toolbox"></div>
+    </div>
+  </div>
+
+  <!-- TODO: placeholder testimonials — replace with real client quotes -->
+  <div class="quotes">
+    <blockquote class="reveal">
+      <span class="qmark display" aria-hidden="true">“</span>
+      <p class="display" data-i18n="quote.1">The menu website paid for itself in the first month — customers order more when it looks this good.</p>
+      <cite class="mono" data-i18n="quote.1c">— Café owner, Istanbul</cite>
+    </blockquote>
+    <blockquote class="reveal">
+      <span class="qmark display" aria-hidden="true">“</span>
+      <p class="display" data-i18n="quote.2">Fast, bilingual, exactly what we asked for — and he thought of details we didn't.</p>
+      <cite class="mono" data-i18n="quote.2c">— Business owner, Dubai</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===================== services ===================== -->
+<section class="section" id="services">
+  <div class="sec-head reveal">
+    <span class="mono sec-num">03</span>
+    <h2 class="display"><span data-i18n="svc.title1">What I</span> <em data-i18n="svc.title2">do</em></h2>
+  </div>
+  <ol class="services">
+    <li class="reveal"><span class="mono idx">01</span><div><h3 class="display" data-i18n="svc.1">Websites that win customers</h3><p data-i18n="svc.1d">Custom-designed, hand-coded sites — no templates. Built to load fast and convert visitors into clients.</p></div></li>
+    <li class="reveal"><span class="mono idx">02</span><div><h3 class="display" data-i18n="svc.2">Menus &amp; e-commerce</h3><p data-i18n="svc.2d">QR menu sites for cafés and restaurants, and online stores with cart and WhatsApp checkout.</p></div></li>
+    <li class="reveal"><span class="mono idx">03</span><div><h3 class="display" data-i18n="svc.3">Arabic + English, done right</h3><p data-i18n="svc.3d">True right-to-left layouts, not mirrored afterthoughts. Turkish too, when you need it.</p></div></li>
+    <li class="reveal"><span class="mono idx">04</span><div><h3 class="display" data-i18n="svc.4">AI content &amp; brand presence</h3><p data-i18n="svc.4d">AI-assisted content for social media that actually gets seen — scripts, visuals, strategy.</p></div></li>
+    <li class="reveal"><span class="mono idx">05</span><div><h3 class="display" data-i18n="svc.5">Security-minded builds</h3><p data-i18n="svc.5d">A cybersecurity analyst's eye on every project — clean code, safe forms, no leaky corners.</p></div></li>
+  </ol>
+</section>
+
+<!-- ===================== contact / footer ===================== -->
+<footer class="contact" id="contact">
+  <p class="mono c-kicker reveal" data-i18n="c.kicker">04 — Have a project in mind?</p>
+  <h2 class="display c-big reveal"><span data-i18n="c.title1">Let's make</span> <em data-i18n="c.title2">something.</em></h2>
+  <div class="c-actions reveal">
+    <a class="btn btn-paper" id="waLink2" href="#" data-i18n="c.wa">WhatsApp ↗</a>
+    <a class="btn btn-lineinv" href="mailto:mohamadhafee11@gmail.com">mohamadhafee11@gmail.com</a>
+  </div>
+  <ul class="c-social mono reveal">
+    <li><a href="https://www.instagram.com/mohammad.elhafi/" target="_blank" rel="noopener">Instagram ↗</a></li>
+    <li><a href="https://www.tiktok.com/@mohammad_elhafi" target="_blank" rel="noopener">TikTok ↗</a></li>
+    <li><a href="https://www.youtube.com/@Mohammad_Elhafi" target="_blank" rel="noopener">YouTube ↗</a></li>
+    <li><a href="https://www.linkedin.com/in/mohammad-elhafi/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+    <li><a href="https://github.com/Rabee-12" target="_blank" rel="noopener">GitHub ↗</a></li>
+  </ul>
+  <div class="c-foot mono">
+    <span data-i18n="c.loc">Dubai, United Arab Emirates</span>
+    <span>mohammadelhafi.me</span>
+    <span data-i18n="c.rights">© 2026 Mohammad Elhafi</span>
+  </div>
+</footer>
+
+<!-- ===================== project modal ===================== -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close mono" id="modalClose">✕ <span data-i18n="close">Close</span></button>
+    <div class="modal-grid">
+      <div class="modal-shot"><img id="modalImg" src="" alt=""></div>
+      <div class="modal-text">
+        <p class="mono m-cat" id="modalCat"></p>
+        <h3 class="display" id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <ul class="tags mono" id="modalTags"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
