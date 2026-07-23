@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0b3d91" />
+<title>بـِ حَليب · Bhaleeb — Menü</title>
+<meta name="description" content="بـِ حَليب · Bhaleeb — Trileçe, milkshake, taze meyve suları ve daha fazlası." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="apple-touch-icon" href="img/logo.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- scroll progress milk fill -->
+<div class="scroll-bar"><span id="scrollFill"></span></div>
+
+<!-- animated background layers -->
+<div class="bg" aria-hidden="true">
+  <div class="bg-grad"></div>
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+  <div class="bg-blob blob-4"></div>
+  <div class="bg-blob blob-5"></div>
+  <div class="bg-blob blob-6"></div>
+  <canvas id="bubbles"></canvas>
+  <div class="floaties" id="floaties"></div>
+</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="milk-drop" aria-hidden="true">
+      <span class="drop"></span>
+      <span class="ripple"></span>
+      <span class="ripple r2"></span>
+    </div>
+
+    <h1 class="logo">
+      <img class="logo-img" src="img/logo.png" alt="بـِ حَليب · Bhaleeb" width="250" height="250" />
+    </h1>
+    <p class="tagline" id="tagline">with milk · بالحليب · sütle</p>
+
+    <a class="ig" href="https://www.instagram.com/bhaleeb" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.22 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.8 2.2 12 2.2m0 5.6A4.2 4.2 0 1 0 16.2 12 4.2 4.2 0 0 0 12 7.8m0 6.93A2.73 2.73 0 1 1 14.73 12 2.73 2.73 0 0 1 12 14.73m5.35-7.14a.98.98 0 1 0 .98.98.98.98 0 0 0-.98-.98"/></svg>
+      @bhaleeb
+    </a>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span id="scrollCueText">menüye kaydır</span>
+      <i></i>
+    </div>
+  </div>
+
+  <!-- hero photo marquee -->
+  <div class="hero-strip" aria-hidden="true">
+    <div class="hero-marquee" id="heroMarquee"></div>
+  </div>
+
+  <!-- liquid wave divider -->
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path id="wavePath" d="M0,40 C240,100 480,0 720,40 C960,80 1200,10 1440,50 L1440,120 L0,120 Z"></path>
+  </svg>
+</header>
+
+<!-- ===== STICKY CATEGORY NAV ===== -->
+<nav class="cats" id="cats" aria-label="Kategoriler">
+  <div class="cats-track" id="catsTrack"></div>
+  <div class="lang" id="lang">
+    <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+      <svg class="globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8zM12 4c.83 1.2 1.48 2.54 1.91 4h-3.82C10.52 6.54 11.17 5.2 12 4zM4.26 14a7.96 7.96 0 0 1 0-4h3.38a16.6 16.6 0 0 0 0 4H4.26zm.81 2h2.95c.32 1.25.78 2.45 1.38 3.56A8.03 8.03 0 0 1 5.07 16zm2.95-8H5.07a8.03 8.03 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8zM12 20c-.83-1.2-1.48-2.54-1.91-4h3.82A13.4 13.4 0 0 1 12 20zm2.34-6H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4zm.26 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14a16.6 16.6 0 0 0 0-4h3.38a7.96 7.96 0 0 1 0 4h-3.38z"/></svg>
+      <span id="langCur">TR</span>
+      <span class="caret" aria-hidden="true">▾</span>
+    </button>
+    <div class="lang-menu" id="langMenu" role="listbox" hidden>
+      <button data-l="tr" role="option">Türkçe</button>
+      <button data-l="en" role="option">English</button>
+      <button data-l="ar" role="option">العربية</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MENU ===== -->
+<main id="menu"></main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <img class="foot-logo-img" src="img/logo.png" alt="بـِ حَليب · Bhaleeb" width="120" height="120" />
+  <div class="foot-contact" id="footContact"></div>
+  <p id="priceNote">Fiyatlar ₺ (TL) cinsindendir</p>
+  <p class="muted" id="madeNote">💙 ile sevgiyle yapıldı</p>
+</footer>
+
+<!-- basket / receipt button -->
+<button class="basket" id="basketBtn" aria-label="Hesap">
+  <span class="basket-ic">🧾</span>
+  <span class="basket-total" id="basketTotal">0₺</span>
+  <span class="basket-count" id="basketCount">0</span>
+</button>
+
+<!-- receipt bottom sheet -->
+<div class="sheet-back" id="sheetBack" hidden></div>
+<aside class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet-grip"></div>
+  <div class="sheet-head">
+    <h3 id="sheetTitle">Hesabım</h3>
+    <button class="sheet-x" id="sheetClose" aria-label="Kapat">✕</button>
+  </div>
+  <div class="receipt" id="receiptList"></div>
+  <div class="sheet-total"><span id="totalLabel">Toplam</span><span id="totalVal">0₺</span></div>
+  <a class="sheet-wa" id="sheetWhats" target="_blank" rel="noopener" hidden></a>
+  <p class="sheet-note" id="sheetNote"></p>
+  <div class="sheet-contact" id="sheetContact"></div>
+  <button class="sheet-clear" id="sheetClear">Temizle</button>
+</aside>
+
+<!-- item detail modal -->
+<div class="modal-back" id="itemBack" hidden></div>
+<div class="item-modal" id="itemModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="item-x" id="itemClose" aria-label="Kapat">✕</button>
+  <div class="item-ph">
+    <div class="item-fallback" id="itemEmoji"></div>
+    <img id="itemImg" alt="">
+    <span class="item-flame" id="itemFlame" hidden>🔥</span>
+  </div>
+  <div class="item-body">
+    <div class="item-titlerow">
+      <h3 id="itemName"></h3>
+      <span class="item-price" id="itemPrice"></span>
+    </div>
+    <div class="item-sub" id="itemSub"></div>
+    <p class="item-desc" id="itemDesc"></p>
+    <div class="item-ctrlrow">
+      <span class="item-out" id="itemOut" hidden></span>
+      <div class="addwrap item-ctrl" id="itemCtrl"></div>
+    </div>
+  </div>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Yukarı çık">↑</button>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>

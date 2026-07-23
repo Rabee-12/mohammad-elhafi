@@ -8,49 +8,44 @@ const WHATSAPP_NUMBER = "";
 const CATEGORIES = [
   { id: "menus",  en: "Menus & Restaurants", ar: "قوائم ومطاعم" },
   { id: "shops",  en: "E-Commerce",          ar: "متاجر إلكترونية" },
-  { id: "fitness",en: "Fitness",             ar: "لياقة" },
   { id: "cars",   en: "Car Rental",          ar: "تأجير سيارات" },
   { id: "agency", en: "Agency",              ar: "وكالة" },
 ];
 
 const PROJECTS = [
-  { id:"klyro", cat:"agency", img:"assets/work/klyro.png",
-    en:{ name:"Klyro", desc:"My studio. Digital menus and websites for cafés and restaurants across Turkey and the Gulf — multilingual, mobile-first, always up to date. Launching soon." },
-    ar:{ name:"كليرو", desc:"استوديوهي الخاص. قوائم رقمية ومواقع للمقاهي والمطاعم في تركيا والخليج — متعددة اللغات، وقريباً بحلّته الكاملة." },
-    tags:["Founder","Agency","Launching soon"] },
-  { id:"kickfit", cat:"fitness", img:"assets/work/kickfit.png",
-    en:{ name:"Kickfit", desc:"A premium gym in Başakşehir led by a European kickboxing champion — dark and gold luxury, trilingual with full RTL, built to sell memberships." },
-    ar:{ name:"كيك فيت", desc:"نادٍ رياضي فاخر في باشاك شهير يقوده بطل أوروبا في الكيك بوكسينغ — فخامة بالأسود والذهبي، ثلاثي اللغات بدعم كامل للعربية." },
-    tags:["Fitness","TR · AR · EN","Luxury"] },
-  { id:"noor", cat:"shops", img:"assets/work/noor.png",
+  { id:"klyro", cat:"agency", img:"assets/work/klyro-crm.png",
+    en:{ name:"Klyro CRM", desc:"My studio's flagship product — a multi-tenant CRM with WhatsApp AI automation for travel agencies and rental businesses. Unified inbox, lead scoring, and an AI assistant that answers and books clients around the clock. Built with Next.js and TypeScript." },
+    ar:{ name:"كليرو CRM", desc:"المنتج الرئيسي لاستوديوهي — نظام إدارة علاقات عملاء متعدد الشركات مع أتمتة واتساب بالذكاء الاصطناعي لوكالات السفر وشركات التأجير. صندوق وارد موحّد، تقييم للعملاء المحتملين، ومساعد ذكي يردّ ويحجز العملاء على مدار الساعة. مبني بـ Next.js وTypeScript." },
+    tags:["Founder","SaaS","WhatsApp AI"] },
+  { id:"noor", cat:"shops", img:"assets/work/noor.png", url:"projects/noor/",
     en:{ name:"NOOR", desc:"A luxury modest-fashion house in dark and gold — full e-commerce with cart and WhatsApp checkout, Arabic calligraphy details, and couture-level restraint." },
     ar:{ name:"نور", desc:"دار أزياء محتشمة فاخرة بالأسود والذهبي — متجر كامل بسلة شراء وإتمام الطلب عبر واتساب، مع لمسات خط عربي وأناقة هادئة." },
     tags:["E-commerce","Cart + WhatsApp","EN · TR · AR"] },
-  { id:"asfalt", cat:"shops", img:"assets/work/asfalt.png",
+  { id:"asfalt", cat:"shops", img:"assets/work/asfalt.png", url:"projects/asfalt/",
     en:{ name:"ASFALT", desc:"Brutalist Istanbul streetwear — concrete grey and acid green, hard edges, limited drops. The deliberate opposite of NOOR, from the same keyboard." },
     ar:{ name:"أسفلت", desc:"ستريت وير إسطنبولي بروح خرسانية — رمادي إسمنتي وأخضر حمضي وحواف حادة. النقيض المتعمد لِنور، من نفس لوحة المفاتيح." },
     tags:["E-commerce","Brutalist","Limited drops"] },
-  { id:"bhaleeb", cat:"menus", img:"assets/work/bhaleeb.png",
+  { id:"bhaleeb", cat:"menus", img:"assets/work/bhaleeb.png", url:"projects/bhaleeb/",
     en:{ name:"Bhaleeb", desc:"A trilingual QR menu for a milk-dessert café — soft blue and cream branding, product photography front and center, built to make you hungry before you sit down." },
     ar:{ name:"بحليب", desc:"قائمة QR ثلاثية اللغات لمقهى حلويات الحليب — هوية بألوان الأزرق والكريمي، مع تصوير المنتجات في الواجهة، صُممت لتفتح شهيتك قبل أن تجلس." },
     tags:["Menu","EN · TR · AR","Mobile-first"] },
-  { id:"abusaleh", cat:"menus", img:"assets/work/abusaleh.png",
+  { id:"abusaleh", cat:"menus", img:"assets/work/abusaleh.png", url:"projects/abusaleh/",
     en:{ name:"Abu Saleh", desc:"A juice café in Istanbul with a dark teal and gold identity — heavy motion graphics, Arabic-first right-to-left layout, designed to feel alive on every scroll." },
     ar:{ name:"أبو صالح", desc:"مقهى عصائر في إسطنبول بهوية تركواز داكن وذهبي — رسوم متحركة غنية، وتصميم عربي من اليمين إلى اليسار، يبعث الحياة في كل تمريرة." },
     tags:["Menu","RTL Arabic","Motion"] },
-  { id:"juicetime", cat:"menus", img:"assets/work/juicetime.png",
+  { id:"juicetime", cat:"menus", img:"assets/work/juicetime.png", url:"projects/juicetime/",
     en:{ name:"Juice Time", desc:"94 items, one bold red-and-white menu. Arabic by default, scraped, structured and rebuilt from scratch for a juice & sweets cafe in Kayaşehir, Istanbul." },
     ar:{ name:"وقت العصير", desc:"٩٤ صنفاً في قائمة جريئة بالأحمر والأبيض. عربية افتراضياً، أُعيد بناؤها من الصفر لمقهى عصائر وحلويات في كاياشهير، إسطنبول." },
     tags:["Menu","94 items","AR default"] },
-  { id:"burger", cat:"menus", img:"assets/work/burger.png",
+  { id:"burger", cat:"menus", img:"assets/work/burger.png", url:"projects/burger/",
     en:{ name:"8ONE Burger", desc:"A burger restaurant menu with big appetite energy — fast, photographic, and built for hungry thumbs on mobile." },
     ar:{ name:"8ONE برجر", desc:"قائمة مطعم برجر بطاقة شهية عالية — سريعة، مصوّرة، ومبنية لتُتصفح بسهولة على الجوال." },
     tags:["Menu","Mobile-first"] },
-  { id:"cita", cat:"cars", img:"assets/work/cita.png",
+  { id:"cita", cat:"cars", img:"assets/work/cita.png", url:"projects/cita/",
     en:{ name:"ÇİTA Rent a Car", desc:"An Istanbul car-rental fleet of 16 cars — trilingual, WhatsApp booking in two taps, airport delivery, built for speed on mobile data." },
     ar:{ name:"تشيتا لتأجير السيارات", desc:"أسطول من ١٦ سيارة في إسطنبول — ثلاثي اللغات، حجز عبر واتساب بنقرتين، توصيل للمطار، وسرعة فائقة على بيانات الجوال." },
     tags:["Car rental","16 cars","WhatsApp booking"] },
-  { id:"alsultan", cat:"cars", img:"assets/work/alsultan.png",
+  { id:"alsultan", cat:"cars", img:"assets/work/alsultan.png", url:"projects/alsultan/",
     en:{ name:"Al Sultan", desc:"A Başakşehir rental brand in red and black, Arabic-first — currently in progress, launching soon." },
     ar:{ name:"السلطان", desc:"علامة تأجير سيارات في باشاك شهير بالأحمر والأسود، عربية أولاً — قيد الإنجاز، قريباً." },
     tags:["Car rental","AR-first","In progress"] },
@@ -86,6 +81,7 @@ const I18N = {
     "work.title1":"Selected","work.title2":"work",
     "work.note":"+ cybersecurity & AI projects joining the shelf soon.",
     "work.open":"View project",
+    "work.visit":"Visit live site ↗",
     "filter.all":"All",
     "about.title1":"About","about.title2":"me","about.cap":"Off duty — rarely.",
     "about.cap2":"On a call — probably about your project.",
@@ -122,6 +118,7 @@ const I18N = {
     "work.title1":"أعمال","work.title2":"مختارة",
     "work.note":"+ مشاريع الأمن السيبراني والذكاء الاصطناعي قادمة قريباً.",
     "work.open":"شاهد المشروع",
+    "work.visit":"زيارة الموقع ↗",
     "filter.all":"الكل",
     "about.title1":"من","about.title2":"أنا","about.cap":"خارج العمل — نادراً.",
     "about.cap2":"على مكالمة — غالباً عن مشروعك.",
@@ -266,6 +263,10 @@ function fillModal(id) {
   const tags = document.getElementById("modalTags");
   tags.innerHTML = "";
   p.tags.forEach(t => { const li = document.createElement("li"); li.textContent = t; tags.appendChild(li); });
+  const visit = document.getElementById("modalVisit");
+  visit.hidden = !p.url;
+  visit.href = p.url || "#";
+  visit.textContent = I18N[lang]["work.visit"];
 }
 function openModal(id) {
   openId = id;

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOOR نور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%99%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head scrolled">
+  <div class="wrap head-in">
+    <a class="logo" href="index.html"><span class="lat">NOOR</span><span class="arb">نور</span></a>
+    <nav class="nav">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="shop.html" class="active" data-i18n="nav_shop">Shop</a>
+      <a href="index.html#story" data-i18n="nav_story">Our Story</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="head-tools">
+      <div class="lang-sw">
+        <button data-lang="en">EN</button>
+        <button data-lang="tr">TR</button>
+        <button data-lang="ar">ع</button>
+      </div>
+      <button class="bag-btn" onclick="openCart()" aria-label="Bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="bag-count">0</span>
+      </button>
+      <button class="burger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="m-nav" id="mnav">
+  <button class="m-close">×</button>
+  <ul>
+    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+    <li><a href="index.html#story" data-i18n="nav_story">Our Story</a></li>
+    <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+</div>
+
+<section class="pdp wrap">
+  <a class="crumb" href="shop.html"><span>←</span> <span data-i18n="back_shop">Back to Collection</span></a>
+  <div class="pdp-grid" id="pdpGrid"></div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker" data-i18n="p_related">You may also love</p>
+      <h2 class="sec-title" data-i18n="p_related">You may also love</h2>
+    </div>
+    <div class="prod-grid cols-3" id="relGrid" style="grid-template-columns:repeat(4,1fr)"></div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="index.html"><span class="lat">NOOR</span><span class="arb">نور</span></a>
+        <p class="foot-tag" data-i18n="footer_tag">Dressed in light.</p>
+      </div>
+      <div class="foot-col">
+        <b data-i18n="footer_shop">Shop</b>
+        <a href="shop.html?cat=open" data-cat-link="open"></a>
+        <a href="shop.html?cat=closed" data-cat-link="closed"></a>
+        <a href="shop.html?cat=embellished" data-cat-link="embellished"></a>
+        <a href="shop.html?cat=hijab" data-cat-link="hijab"></a>
+      </div>
+      <div class="foot-col">
+        <b data-i18n="footer_help">Contact</b>
+        <a href="https://wa.me/905000000000" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@noor-fashion.com">info@noor-fashion.com</a>
+        <a href="index.html#contact" data-i18n="contact_title">Visit the Atelier</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 NOOR نور</span>
+      <span data-i18n="footer_note"></span>
+      <span>Made by <a href="#">Klyro</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cartDrawer">
+  <div class="cart-head">
+    <h3 data-i18n="cart_title">Your Bag</h3>
+    <button onclick="closeCart()" aria-label="Close">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot" id="cartFoot">
+    <div class="cart-total-row"><b data-i18n="cart_total">Total</b><span class="amt" id="cartTotal">₺0</span></div>
+    <p class="cart-note" data-i18n="cart_note"></p>
+    <button class="wa-btn" onclick="checkoutWA()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.1-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.2 2.1-.5 3.6a12 12 0 0 0 4.5 4.7c1.7 1 2.6 1 3.5.8.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.2-.2-.2-.4-.3z"/></svg>
+      <span data-i18n="cart_wa">Order via WhatsApp</span>
+    </button>
+  </div>
+</aside>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const pid = new URLSearchParams(location.search).get("id");
+  const prod = PRODUCTS.find(p => p.id === pid) || PRODUCTS[0];
+  let selSize = prod.sizes[0] || null;
+  let qty = 1;
+  let curImg = 1;
+
+  function renderPDP() {
+    const lang = NOOR.lang;
+    document.body.dataset.title = prod.name[lang];
+    document.title = `${prod.name[lang]} — NOOR نور`;
+    const imgs = Array.from({ length: prod.imgs }, (_, i) => i + 1);
+    document.getElementById("pdpGrid").innerHTML = `
+      <div class="gallery li li-1">
+        <div class="thumbs">
+          ${imgs.map(i => `
+            <button class="${i === curImg ? "on" : ""}" data-im="${i}">
+              <img src="${NOOR.img(prod, i)}" alt="" loading="lazy">
+            </button>`).join("")}
+        </div>
+        <div class="main-img"><img id="mainImg" src="${NOOR.img(prod, curImg)}" alt="${prod.name[lang]}"></div>
+      </div>
+      <div class="pdp-info li li-2">
+        <p class="p-cat">${CATS[prod.cat][lang]}${prod.tag ? ` · ${NOOR.t("tag_" + prod.tag)}` : ""}</p>
+        <h1 class="pdp-name">${prod.name[lang]}</h1>
+        <div class="pdp-price">${NOOR.fmt(prod.price)}</div>
+        <p class="pdp-desc">${prod.desc[lang]}</p>
+        <span class="opt-label">${prod.sizes.length ? NOOR.t("p_size") : NOOR.t("p_onesize")}</span>
+        ${prod.sizes.length ? `
+        <div class="sizes">
+          ${prod.sizes.map(s => `<button class="size-btn ${s === selSize ? "on" : ""}" data-size="${s}">${s}″</button>`).join("")}
+        </div>` : ""}
+        <span class="opt-label">${NOOR.t("p_qty")}</span>
+        <div class="qty-row">
+          <div class="qty">
+            <button id="qMinus">−</button><span id="qVal">${qty}</span><button id="qPlus">+</button>
+          </div>
+          <button class="btn solid add-btn" id="addBtn">${NOOR.t("p_add")}</button>
+        </div>
+        <ul class="pdp-details">
+          <li>${NOOR.t("p_detail1")}</li>
+          <li>${NOOR.t("p_detail2")}</li>
+          <li>${NOOR.t("p_detail3")}</li>
+        </ul>
+      </div>`;
+    // events
+    document.querySelectorAll(".thumbs button").forEach(b =>
+      b.addEventListener("click", () => { curImg = +b.dataset.im; renderPDP(); }));
+    document.querySelectorAll(".size-btn").forEach(b =>
+      b.addEventListener("click", () => { selSize = b.dataset.size; renderPDP(); }));
+    document.getElementById("qMinus").addEventListener("click", () => { if (qty > 1) { qty--; renderPDP(); } });
+    document.getElementById("qPlus").addEventListener("click", () => { qty++; renderPDP(); });
+    document.getElementById("addBtn").addEventListener("click", () => addToCart(prod.id, selSize, qty));
+    // related: same category first, then others
+    const rel = PRODUCTS.filter(p => p.id !== prod.id && p.cat === prod.cat)
+      .concat(PRODUCTS.filter(p => p.id !== prod.id && p.cat !== prod.cat))
+      .slice(0, 4);
+    document.getElementById("relGrid").innerHTML = rel.map((p, i) => productCard(p, i)).join("");
+    // footer links
+    document.querySelectorAll("[data-cat-link]").forEach(a => {
+      a.textContent = CATS[a.dataset.catLink][lang];
+    });
+    watchReveals();
+  }
+  document.addEventListener("noor:ready", renderPDP);
+  document.addEventListener("noor:lang", renderPDP);
+</script>
+</body>
+</html>

@@ -12,6 +12,7 @@ An editorial, magazine-style one-pager — hand-coded, no frameworks, no templat
 - **Bilingual:** English + full Arabic RTL, switchable in one click
 - **Design:** cream paper / ink / terracotta palette, Fraunces + Archivo type (Amiri + IBM Plex Sans Arabic for Arabic), arch-framed photography, scroll-reveal animations
 - **Work showcase:** filterable project grid with a rotating "cover story" card and per-project detail modals
+- **Live projects included:** every client site is bundled in this repo under `projects/<name>/` and served from the same domain — the "Visit live site" button in each project modal opens it (e.g. `/projects/noor/`)
 
 ## Run locally
 

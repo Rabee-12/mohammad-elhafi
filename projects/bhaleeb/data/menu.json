@@ -1,0 +1,1026 @@
+{
+    "contact": {
+        "instagram": "https://www.instagram.com/bhaleeb",
+        "tiktok": "https://www.tiktok.com/@bhaleeb",
+        "snapchat": "https://snapchat.com/t/6CMKjnxL",
+        "maps": "https://maps.app.goo.gl/n6pruPNKFyTLVkTw9",
+        "whatsapp": "",
+        "whatsappSoon": true,
+        "phone": ""
+    },
+    "categories": [
+        {
+            "id": "bhaleeb",
+            "slug": "bhaleeb",
+            "emo": "🥛",
+            "t": {
+                "tr": "Bhaleeb Çeşitleri",
+                "en": "Bhaleeb Specials",
+                "ar": "أصناف بـِ حَليب"
+            },
+            "thumb": "1.jpg",
+            "items": [
+                {
+                    "tr": "Meyve Bombası",
+                    "en": "Fruit Bomb",
+                    "ar": "قنبلة الفواكه",
+                    "p": 300,
+                    "img": "1.jpg",
+                    "e": "🍓",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Taze mevsim meyveleri, krema ve sütlü tatlı tabanıyla hazırlanan imza tatlımız.",
+                        "en": "Our signature dessert loaded with fresh seasonal fruit, cream and a milky base.",
+                        "ar": "حلوانا المميّزة بالفواكه الطازجة والقشطة وقاعدة الحليب."
+                    }
+                },
+                {
+                    "tr": "Kadayıf Bombası",
+                    "en": "Kadayıf Bomb",
+                    "ar": "قنبلة الكنافة",
+                    "p": 300,
+                    "img": "2.jpg",
+                    "e": "🍯",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Çıtır kadayıf, fıstık ve kremayla sarılı imza bombamız.",
+                        "en": "Crispy kadayıf wrapped with pistachio and cream.",
+                        "ar": "كنافة مقرمشة ملفوفة بالفستق والقشطة."
+                    }
+                },
+                {
+                    "tr": "Çilek Aşkı",
+                    "en": "Strawberry Love",
+                    "ar": "عشق الفراولة",
+                    "p": 225,
+                    "img": "3.jpg",
+                    "e": "💗",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Çilek ve kremanın muhteşem buluşması.",
+                        "en": "A dreamy meeting of strawberries and cream.",
+                        "ar": "لقاء رائع بين الفراولة والقشطة."
+                    }
+                },
+                {
+                    "tr": "Efsane Brownie",
+                    "en": "Legendary Brownie",
+                    "ar": "براوني الأسطورة",
+                    "p": 350,
+                    "img": "4.jpg",
+                    "e": "🍫",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Yoğun çikolatalı brownie ile hazırlanan efsane lezzet.",
+                        "en": "Rich chocolate brownie — a legendary treat.",
+                        "ar": "براوني الشوكولاتة الغنيّة بطعم أسطوري."
+                    }
+                },
+                {
+                    "tr": "Fenomen Kek",
+                    "en": "Phenomenon Cake",
+                    "ar": "كيك الفينومين",
+                    "p": 400,
+                    "img": "5.jpg",
+                    "e": "🎂",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "NEW",
+                    "desc": {
+                        "tr": "Sosyal medyanın fenomeni; katmanlı, kremalı özel kek.",
+                        "en": "The internet-famous layered cream cake.",
+                        "ar": "كيك الطبقات الكريمي الشهير على السوشال ميديا."
+                    }
+                },
+                {
+                    "tr": "Fenomen Red Velvet",
+                    "en": "Red Velvet",
+                    "ar": "ريد فيلفيت",
+                    "p": 400,
+                    "img": "6.jpg",
+                    "e": "❤️",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "NEW",
+                    "desc": {
+                        "tr": "Kadifemsi red velvet ve peynirli krema.",
+                        "en": "Velvety red velvet with cream-cheese frosting.",
+                        "ar": "ريد فيلفيت مخملي مع كريمة الجبن."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "trilece",
+            "slug": "trilece",
+            "emo": "🍰",
+            "t": {
+                "tr": "Trileçe Çeşitleri",
+                "en": "Trileçe",
+                "ar": "تريليتشه"
+            },
+            "thumb": "10.jpg",
+            "items": [
+                {
+                    "tr": "Sade Trileçe",
+                    "en": "Classic",
+                    "ar": "تريليتشه سادة",
+                    "p": 200,
+                    "img": "3.jpg",
+                    "e": "🤍",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Mangolu Trileçe",
+                    "en": "Mango",
+                    "ar": "تريليتشه مانجو",
+                    "p": 300,
+                    "img": "6.jpg",
+                    "e": "🥭",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Meyveli Trileçe",
+                    "en": "Fruit",
+                    "ar": "تريليتشه فواكه",
+                    "p": 300,
+                    "img": "4.jpg",
+                    "e": "🍓",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Karışık Soslu Trileçe",
+                    "en": "Mixed Sauce",
+                    "ar": "تريليتشه ميكس صوصات",
+                    "p": 300,
+                    "img": "8.jpg",
+                    "e": "🍯",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Nutella'lı Trileçe",
+                    "en": "Nutella",
+                    "ar": "تريليتشه نوتيلا",
+                    "p": 300,
+                    "img": "9.jpg",
+                    "e": "🍫",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Dubai Trileçe",
+                    "en": "Dubai style",
+                    "ar": "تريليتشه دبي",
+                    "p": 350,
+                    "img": "10.jpg",
+                    "e": "🌟",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Üç sütle ıslatılmış kek üzerine Dubai usulü fıstık ve kadayıf.",
+                        "en": "Three-milk soaked cake, Dubai-style with pistachio & kadayıf.",
+                        "ar": "تريليتشه على الطريقة الدبيّة بالفستق والكنافة."
+                    }
+                },
+                {
+                    "tr": "Lotus'lu Trileçe",
+                    "en": "Lotus",
+                    "ar": "تريليتشه لوتس",
+                    "p": 350,
+                    "img": "5.jpg",
+                    "e": "🍪",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Brownie'li Trileçe",
+                    "en": "Brownie",
+                    "ar": "تريليتشه براوني",
+                    "p": 350,
+                    "img": "1.jpg",
+                    "e": "🍫",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Fıstıklı Trileçe",
+                    "en": "Pistachio",
+                    "ar": "تريليتشه فستق",
+                    "p": 350,
+                    "img": "2.jpg",
+                    "e": "🌰",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Ballı ve Kuruyemişli Trileçe",
+                    "en": "Honey & Nuts",
+                    "ar": "تريليتشه عسل ومكسرات",
+                    "p": 350,
+                    "img": "11.jpg",
+                    "e": "🍯",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Avokadolu Ballı ve Kuruyemişli",
+                    "en": "Avocado, Honey & Nuts",
+                    "ar": "تريليتشه أفوكادو وعسل ومكسرات",
+                    "p": 350,
+                    "img": "7.jpg",
+                    "e": "🥑",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "kadayif",
+            "slug": "kadayif",
+            "emo": "🍮",
+            "t": {
+                "tr": "Kadayıflı Trileçe",
+                "en": "Kadayıf Trileçe",
+                "ar": "تريليتشه بالكنافة"
+            },
+            "thumb": "1.jpg",
+            "items": [
+                {
+                    "tr": "Mangolu",
+                    "en": "Mango",
+                    "ar": "كنافة مانجو",
+                    "p": 350,
+                    "img": "4.jpg",
+                    "e": "🥭",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Meyveli",
+                    "en": "Fruit",
+                    "ar": "كنافة فواكه",
+                    "p": 350,
+                    "img": "2.jpg",
+                    "e": "🍓",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Karışık Soslu",
+                    "en": "Mixed Sauce",
+                    "ar": "كنافة ميكس صوصات",
+                    "p": 350,
+                    "img": "5.jpg",
+                    "e": "🍯",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Fıstıklı",
+                    "en": "Pistachio",
+                    "ar": "كنافة فستق",
+                    "p": 350,
+                    "img": "1.jpg",
+                    "e": "🌰",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Kadayıflı trileçe üzerine bol Antep fıstığı.",
+                        "en": "Kadayıf trileçe topped with plenty of pistachio.",
+                        "ar": "تريليتشه بالكنافة مع فستق حلبي وفير."
+                    }
+                },
+                {
+                    "tr": "Nutella'lı",
+                    "en": "Nutella",
+                    "ar": "كنافة نوتيلا",
+                    "p": 330,
+                    "img": "6.jpg",
+                    "e": "🍫",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Lotus'lu",
+                    "en": "Lotus",
+                    "ar": "كنافة لوتس",
+                    "p": 350,
+                    "img": "3.jpg",
+                    "e": "🍪",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "kashri",
+            "slug": "kashri",
+            "emo": "🍯",
+            "t": {
+                "tr": "Baklavalı Trileçe",
+                "en": "Kashri",
+                "ar": "كشري"
+            },
+            "thumb": "1.jpg",
+            "items": [
+                {
+                    "tr": "Fıstıklı Kashri",
+                    "en": "Pistachio",
+                    "ar": "كشري بستاشيو",
+                    "p": 350,
+                    "img": "1.jpg",
+                    "e": "🌰",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Baklava kıvamında, fıstıklı kşri trileçe.",
+                        "en": "Baklava-style kashri trileçe with pistachio.",
+                        "ar": "كشري بقوام البقلاوة مع الفستق."
+                    }
+                },
+                {
+                    "tr": "Meyveli Kashri",
+                    "en": "Fruit",
+                    "ar": "كشري فواكه",
+                    "p": 350,
+                    "img": "2.jpg",
+                    "e": "🍓",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Lotus'lu Kashri",
+                    "en": "Lotus",
+                    "ar": "كشري لوتس",
+                    "p": 350,
+                    "img": "3.jpg",
+                    "e": "🍪",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Mangolu Kashri",
+                    "en": "Mango",
+                    "ar": "كشري مانجو",
+                    "p": 350,
+                    "img": "4.jpg",
+                    "e": "🥭",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Karışık Soslu Kashri",
+                    "en": "Mixed Sauce",
+                    "ar": "كشري ميكس صوصات",
+                    "p": 350,
+                    "img": "5.jpg",
+                    "e": "🍯",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Nutella'lı Kashri",
+                    "en": "Nutella",
+                    "ar": "كشري نوتيلا",
+                    "p": 330,
+                    "img": "6.jpg",
+                    "e": "🍫",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "milkshake",
+            "slug": "milkshake",
+            "emo": "🥤",
+            "t": {
+                "tr": "Milkshake",
+                "en": "Milkshake",
+                "ar": "ميلك شيك"
+            },
+            "thumb": "3.jpg",
+            "items": [
+                {
+                    "tr": "Çilekli Milkshake",
+                    "en": "Strawberry",
+                    "ar": "ميلك شيك فراولة",
+                    "p": 195,
+                    "img": "3.jpg",
+                    "e": "🍓",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Gerçek çilek ve sütle çırpılmış milkshake.",
+                        "en": "Milkshake blended with real strawberries and milk.",
+                        "ar": "ميلك شيك بالفراولة الطازجة والحليب."
+                    }
+                },
+                {
+                    "tr": "Lotus'lu Milkshake",
+                    "en": "Lotus",
+                    "ar": "ميلك شيك لوتس",
+                    "p": 195,
+                    "img": "4.jpg",
+                    "e": "🍪",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Maraş Dondurmalı Milkshake",
+                    "en": "Maraş Ice Cream",
+                    "ar": "ميلك شيك بوظة مرعش",
+                    "p": 195,
+                    "img": "2.jpg",
+                    "e": "🍦",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Oreo'lu Milkshake",
+                    "en": "Oreo",
+                    "ar": "ميلك شيك أوريو",
+                    "p": 195,
+                    "img": "1.jpg",
+                    "e": "🖤",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "slush",
+            "slug": "slush",
+            "emo": "🧊",
+            "t": {
+                "tr": "Slush & Kokteyl",
+                "en": "Slush & Cocktails",
+                "ar": "سلاش وكوكتيل"
+            },
+            "thumb": "13.jpg",
+            "items": [
+                {
+                    "tr": "Mangolu Smoothie",
+                    "en": "Mango Smoothie",
+                    "ar": "سموذي مانجو",
+                    "p": 150,
+                    "img": "13.jpg",
+                    "e": "🥭",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Taze mango ile buz gibi smoothie.",
+                        "en": "Ice-cold smoothie made with fresh mango.",
+                        "ar": "سموذي بارد بالمانجو الطازج."
+                    }
+                },
+                {
+                    "tr": "Çilekli Smoothie",
+                    "en": "Strawberry Smoothie",
+                    "ar": "سموذي فراولة",
+                    "p": 125,
+                    "img": "5.jpg",
+                    "e": "🍓",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Muz, Süt ve Çilekli Kokteyl",
+                    "en": "Banana · Milk · Berry",
+                    "ar": "كوكتيل موز وحليب وفراولة",
+                    "p": 150,
+                    "img": "8.jpg",
+                    "e": "🍌",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Çarkıfelek Meyve Kokteyli",
+                    "en": "Passion Fruit",
+                    "ar": "كوكتيل فاكهة العاطفة",
+                    "p": 150,
+                    "img": "14.jpg",
+                    "e": "🌸",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Kivi, Mango ve Karpuzlu Kokteyl",
+                    "en": "Kiwi · Mango · Melon",
+                    "ar": "كوكتيل كيوي ومانجو وبطيخ",
+                    "p": 135,
+                    "img": "10.jpg",
+                    "e": "🍉",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Ananas ve Portakallı Kokteyl",
+                    "en": "Pineapple · Orange",
+                    "ar": "كوكتيل أناناس وبرتقال",
+                    "p": 130,
+                    "img": "1.jpg",
+                    "e": "🍍",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Limonata",
+                    "en": "Lemonade",
+                    "ar": "ليموناضة",
+                    "p": 125,
+                    "img": "11.jpg",
+                    "e": "🍋",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Naneli Limonata",
+                    "en": "Mint Lemonade",
+                    "ar": "ليموناضة بالنعناع",
+                    "p": 100,
+                    "img": "12.jpg",
+                    "e": "🌿",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Karışık Meyve Kokteyli",
+                    "en": "Mixed Fruit",
+                    "ar": "كوكتيل فواكه مشكل",
+                    "p": 130,
+                    "img": "7.jpg",
+                    "e": "🍹",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Çilek, Yaban Mersini ve Kirazlı Kokteyl",
+                    "en": "Berry & Cherry",
+                    "ar": "كوكتيل فراولة وتوت وكرز",
+                    "p": 150,
+                    "img": "6.jpg",
+                    "e": "🫐",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Kivi ve Mangolu Kokteyl",
+                    "en": "Kiwi & Mango",
+                    "ar": "كوكتيل كيوي ومانجو",
+                    "p": 150,
+                    "img": "9.jpg",
+                    "e": "🥝",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Karpuz, Çilek ve Orman Meyveli Kokteyl",
+                    "en": "Melon · Forest Berry",
+                    "ar": "كوكتيل بطيخ وفراولة وتوت بري",
+                    "p": 130,
+                    "img": "2.jpg",
+                    "e": "🍉",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Bademli Milkshake",
+                    "en": "Almond Milkshake",
+                    "ar": "ميلك شيك لوز",
+                    "p": 150,
+                    "img": "4.jpg",
+                    "e": "🌰",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Hindistan Cevizli Milkshake",
+                    "en": "Coconut Milkshake",
+                    "ar": "ميلك شيك جوز الهند",
+                    "p": 150,
+                    "img": "3.jpg",
+                    "e": "🥥",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "juice",
+            "slug": "juice",
+            "emo": "🍊",
+            "t": {
+                "tr": "Taze Meyve Suları",
+                "en": "Fresh Juices",
+                "ar": "عصائر فريش"
+            },
+            "thumb": "2.jpg",
+            "items": [
+                {
+                    "tr": "Avokado Kokteyl",
+                    "en": "Avocado · Cream · Nuts",
+                    "ar": "كوكتيل أفوكادو بالقشطة والمكسرات",
+                    "p": 200,
+                    "img": "2.jpg",
+                    "e": "🥑",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Avokado, kaymak, bal ve kuruyemişli enerji kokteyli.",
+                        "en": "Avocado with cream, honey and nuts — an energy cocktail.",
+                        "ar": "كوكتيل الأفوكادو بالقشطة والعسل والمكسرات."
+                    }
+                },
+                {
+                    "tr": "Avokado Suyu",
+                    "en": "Avocado",
+                    "ar": "عصير أفوكادو",
+                    "p": 150,
+                    "img": "1.jpg",
+                    "e": "🥑",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Portakal Suyu",
+                    "en": "Orange",
+                    "ar": "عصير برتقال",
+                    "p": 110,
+                    "img": "3.jpg",
+                    "e": "🍊",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Portakal & Havuç",
+                    "en": "Orange & Carrot",
+                    "ar": "عصير برتقال وجزر",
+                    "p": 110,
+                    "img": "4.jpg",
+                    "e": "🥕",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Havuç Suyu",
+                    "en": "Carrot",
+                    "ar": "عصير جزر",
+                    "p": 110,
+                    "img": "5.jpg",
+                    "e": "🥕",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Kivi Suyu",
+                    "en": "Kiwi",
+                    "ar": "عصير كيوي",
+                    "p": 110,
+                    "img": "6.jpg",
+                    "e": "🥝",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Muz Milkshake",
+                    "en": "Banana Milkshake",
+                    "ar": "ميلك شيك موز",
+                    "p": 125,
+                    "img": "7.jpg",
+                    "e": "🍌",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "icecream",
+            "slug": "icecream",
+            "emo": "🍦",
+            "t": {
+                "tr": "Dondurma",
+                "en": "Ice Cream",
+                "ar": "آيس كريم"
+            },
+            "thumb": "4.jpg",
+            "items": [
+                {
+                    "tr": "Maraş Dondurması",
+                    "en": "Maraş",
+                    "ar": "بوظة مرعش",
+                    "p": 50,
+                    "img": "4.jpg",
+                    "e": "🍦",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Geleneksel, kıvamlı Maraş dondurması.",
+                        "en": "Traditional, stretchy Maraş ice cream.",
+                        "ar": "بوظة مرعش التقليدية الكثيفة."
+                    }
+                },
+                {
+                    "tr": "Lotus'lu",
+                    "en": "Lotus",
+                    "ar": "آيس كريم لوتس",
+                    "p": 50,
+                    "img": "9.jpg",
+                    "e": "🍪",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Oreo'lu",
+                    "en": "Oreo",
+                    "ar": "آيس كريم أوريو",
+                    "p": 50,
+                    "img": "2.jpg",
+                    "e": "🖤",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Limonlu",
+                    "en": "Lemon",
+                    "ar": "آيس كريم ليمون",
+                    "p": 50,
+                    "img": "11.jpg",
+                    "e": "🍋",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Karışık Meyveli",
+                    "en": "Mixed Fruit",
+                    "ar": "آيس كريم فواكه مشكلة",
+                    "p": 50,
+                    "img": "7.jpg",
+                    "e": "🍓",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Çilekli ve Yaban Mersinli",
+                    "en": "Strawberry & Blueberry",
+                    "ar": "آيس كريم فراولة وتوت بري",
+                    "p": 50,
+                    "img": "5.jpg",
+                    "e": "🫐",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Çilekli ve Mangolu",
+                    "en": "Strawberry & Mango",
+                    "ar": "آيس كريم فراولة ومانجو",
+                    "p": 50,
+                    "img": "6.jpg",
+                    "e": "🥭",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Mangolu",
+                    "en": "Mango",
+                    "ar": "آيس كريم مانجو",
+                    "p": 50,
+                    "img": "12.jpg",
+                    "e": "🥭",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Ananaslı",
+                    "en": "Pineapple",
+                    "ar": "آيس كريم أناناس",
+                    "p": 50,
+                    "img": "1.jpg",
+                    "e": "🍍",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Bademli",
+                    "en": "Almond",
+                    "ar": "آيس كريم لوز",
+                    "p": 50,
+                    "img": "10.jpg",
+                    "e": "🌰",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Hindistan Cevizli",
+                    "en": "Coconut",
+                    "ar": "آيس كريم جوز الهند",
+                    "p": 50,
+                    "img": "3.jpg",
+                    "e": "🥥",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Kivili",
+                    "en": "Kiwi",
+                    "ar": "آيس كريم كيوي",
+                    "p": 50,
+                    "img": "8.jpg",
+                    "e": "🥝",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        },
+        {
+            "id": "waffle",
+            "slug": "waffle",
+            "emo": "🧇",
+            "t": {
+                "tr": "Krep & Waffle",
+                "en": "Crepes & Waffles",
+                "ar": "كريب ووافل"
+            },
+            "thumb": "3_1.jpg",
+            "items": [
+                {
+                    "tr": "Dubai Krep",
+                    "en": "Dubai Crepe",
+                    "ar": "كريب دبي",
+                    "p": 250,
+                    "img": "3_1.jpg",
+                    "e": "🌯",
+                    "hot": true,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": {
+                        "tr": "Dubai usulü, fıstıklı ve çikolatalı krep.",
+                        "en": "Dubai-style crepe with pistachio and chocolate.",
+                        "ar": "كريب على الطريقة الدبيّة بالفستق والشوكولاتة."
+                    }
+                },
+                {
+                    "tr": "Karışık Atıştırmalık Kutusu",
+                    "en": "Mixed Snack Box",
+                    "ar": "علبة سناكس مشكلة",
+                    "p": 250,
+                    "img": "1_1.jpg",
+                    "e": "🍱",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Meyveli ve Soslu Mini Pancake",
+                    "en": "Mini Pancakes Box",
+                    "ar": "علبة ميني بان كيك",
+                    "p": 250,
+                    "img": "2_1.jpg",
+                    "e": "🥞",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                },
+                {
+                    "tr": "Meyveli ve Soslu Waffle Kutusu",
+                    "en": "Fruit Waffle Box",
+                    "ar": "علبة وافل بالفواكه",
+                    "p": 250,
+                    "img": "4.jpg",
+                    "e": "🧇",
+                    "hot": false,
+                    "soldOut": false,
+                    "badge": "",
+                    "desc": null
+                }
+            ]
+        }
+    ]
+}

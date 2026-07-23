@@ -1,0 +1,4 @@
+system-commandline-sentinel-files/
+*.bak
+.DS_Store
+Thumbs.db

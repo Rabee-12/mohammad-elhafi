@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASFALT — Istanbul Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23101010'/><text y='72' x='50' text-anchor='middle' font-size='60' fill='%23c9f21b' font-family='sans-serif' font-weight='900'>A</text></svg>">
+</head>
+<body>
+
+  <!-- ticker -->
+  <div class="ticker"><div class="ticker-inner" id="ticker"></div></div>
+
+  <!-- header -->
+  <header class="site-head">
+    <div class="wrap head-in">
+      <a class="logo" href="index.html">ASFALT<span class="star">★</span></a>
+      <nav class="nav-desk">
+        <a href="index.html" data-i18n="nav_home"></a>
+        <a href="shop.html" data-i18n="nav_shop"></a>
+        <a href="index.html#drop" data-i18n="nav_drop"></a>
+        <a href="index.html#about" data-i18n="nav_about"></a>
+      </nav>
+      <div class="head-tools">
+        <div class="lang-sw">
+          <button data-lang="en">EN</button>
+          <button data-lang="tr">TR</button>
+          <button data-lang="ar">ع</button>
+        </div>
+        <button class="bag-btn" onclick="openCart()">
+          <span data-i18n="cart_title"></span>
+          <span class="bag-count">0</span>
+        </button>
+        <button class="burger" aria-label="menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- mobile nav -->
+  <div class="mnav" id="mnav">
+    <button class="m-close">✕</button>
+    <a href="index.html" data-i18n="nav_home"></a>
+    <a href="shop.html" data-i18n="nav_shop"></a>
+    <a href="index.html#drop" data-i18n="nav_drop"></a>
+    <a href="index.html#about" data-i18n="nav_about"></a>
+  </div>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy wrap">
+        <span class="mono hero-kicker" data-i18n="hero_kicker"></span>
+        <h1 class="disp hero-h">
+          <span class="row">ASFALT</span>
+          <span class="row hollow">STREET</span>
+          <span class="row"><span class="acid-block">WEAR</span></span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub"></p>
+        <div class="hero-ctas">
+          <a class="btn" href="index.html#drop" data-i18n="hero_cta"></a>
+          <a class="btn dark" href="shop.html" data-i18n="hero_cta2"></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <span class="sticker">Drop 04 — Beton</span>
+        <div class="frame">
+          <img src="images/products/p01-1.jpg" alt="ASFALT Drop 04">
+          <div class="mono"><span>ASF-D04-001</span><span>★ IST</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="wm">ASFALT</div>
+    <div class="hero-stats wrap">
+      <div class="hstat"><b>28</b><span data-i18n="hero_stat1"></span></div>
+      <div class="hstat"><b>0</b><span data-i18n="hero_stat2"></span></div>
+      <div class="hstat"><b>36</b><span data-i18n="hero_stat3"></span></div>
+    </div>
+  </section>
+
+  <!-- categories -->
+  <section class="wrap">
+    <div class="sec-head">
+      <h2 class="disp" data-i18n="sec_cats"></h2>
+    </div>
+    <div class="cat-index" id="catIndex"></div>
+  </section>
+
+  <!-- featured drop -->
+  <section class="wrap" id="drop">
+    <div class="sec-head">
+      <div>
+        <h2 class="disp" data-i18n="sec_drop"></h2>
+        <span class="sub" data-i18n="sec_drop_sub"></span>
+      </div>
+      <a class="lnk" href="shop.html" data-i18n="view_all"></a>
+    </div>
+    <div class="p-grid" id="featGrid"></div>
+  </section>
+
+  <!-- mid marquee -->
+  <div class="mid-marquee"><div class="inner" id="midMarquee"></div></div>
+
+  <!-- manifesto -->
+  <section class="manifesto" id="about">
+    <div class="wrap">
+      <span class="mono kick" data-i18n="mani_kicker"></span>
+      <h2 class="disp" id="maniTitle"></h2>
+      <p data-i18n="mani_body"></p>
+    </div>
+    <div class="wm">EST.21</div>
+  </section>
+
+  <!-- footer -->
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-tag disp" data-i18n="footer_tag"></div>
+          <div class="barcode"></div>
+        </div>
+        <div>
+          <h4 data-i18n="footer_shop"></h4>
+          <a href="shop.html" data-i18n="nav_shop"></a>
+          <a href="index.html#drop" data-i18n="nav_drop"></a>
+        </div>
+        <div>
+          <h4 data-i18n="footer_about"></h4>
+          <p data-i18n="footer_addr"></p>
+          <p class="mono">@asfalt.ist</p>
+        </div>
+      </div>
+      <div class="foot-wordmark">ASFALT</div>
+      <div class="foot-base">
+        <span>© 2026 ASFALT</span>
+        <span data-i18n="footer_note"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- cart -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <h3 data-i18n="cart_title"></h3>
+      <button onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot" id="cartFoot">
+      <div class="cart-total-row"><span data-i18n="cart_total"></span><span id="cartTotal"></span></div>
+      <p class="cart-note" data-i18n="cart_note"></p>
+      <button class="btn cart-wa" onclick="checkoutWA()" data-i18n="cart_wa"></button>
+    </div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    const CAT_PEEK = { hoods: "p01", tees: "p10", jackets: "p15", pants: "p24", accs: "p26" };
+    const FEATURED = ["p01","p04","p07","p10","p15","p19","p23","p25"];
+
+    function renderHome() {
+      const { t, lang } = ASFALT;
+
+      // ticker (doubled for seamless loop)
+      const tk = t("ticker") + " " + t("ticker");
+      document.getElementById("ticker").innerHTML = `<span>${tk}</span>`;
+
+      // categories
+      document.getElementById("catIndex").innerHTML =
+        Object.keys(CATS).map((c, i) => {
+          const count = PRODUCTS.filter(p => p.cat === c).length;
+          return `
+          <a class="cat-row" href="shop.html?cat=${c}">
+            <span class="num">0${i + 1}</span>
+            <span class="cname">${CATS[c][lang]}</span>
+            <img class="peek" src="images/products/${CAT_PEEK[c]}-1.jpg" alt="" loading="lazy">
+            <span class="count">${count} ${t("results")}</span>
+            <span class="arrow">→</span>
+          </a>`;
+        }).join("");
+
+      // featured
+      document.getElementById("featGrid").innerHTML =
+        FEATURED.map((id, i) => productCard(PRODUCTS.find(p => p.id === id), (i % 4) + 1)).join("");
+
+      // mid marquee
+      const mm = ("ASFALT ★ NO RESTOCKS ★ ISTANBUL ★ DROP 04 ★ ").repeat(4);
+      document.getElementById("midMarquee").innerHTML = `<span>${mm}</span>`;
+
+      // manifesto title with stroked em
+      const mt = { en: 'Built on concrete, <em>not on hype.</em>', tr: 'Hype üzerine değil, <em>beton üzerine.</em>', ar: 'بُنيت على الإسمنت، <em>لا على الضجيج.</em>' };
+      document.getElementById("maniTitle").innerHTML = mt[lang];
+
+      watchReveals();
+    }
+    document.addEventListener("asfalt:ready", renderHome);
+    document.addEventListener("asfalt:lang", renderHome);
+  </script>
+</body>
+</html>

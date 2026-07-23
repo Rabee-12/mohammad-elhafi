@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Sultan Rent a Car — السلطان لتأجير السيارات · إسطنبول</title>
+  <meta name="description" content="Al Sultan Rent a Car — السلطان لتأجير السيارات في باشاك شهير، إسطنبول. حجز سريع عبر واتساب، تسليم المطار، ودعم 24/7. Car rental in Istanbul." />
+  <meta name="theme-color" content="#0e0e10" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Al Sultan Rent a Car — Istanbul Car Rental" />
+  <meta property="og:description" content="السلطان لتأجير السيارات · أحدث الموديلات · تسليم المطار · واتساب 24/7" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/cars/renault-megane/renault-megane-1.jpg" />
+
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Cairo:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=21" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="siteHeader">
+    <div class="container header__row">
+      <a class="logo" href="#top" aria-label="Al Sultan Rent a Car">
+        <span class="logo__badge">
+          <span class="logo__c">Al</span><span class="logo__rest">&nbsp;Sultan</span>
+        </span>
+        <span class="logo__sub">RENT A CAR</span>
+      </a>
+
+      <nav class="nav" id="siteNav">
+        <a href="#fleet" data-i18n="nav.fleet">Fleet</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#why" data-i18n="nav.why">Why Us</a>
+        <a href="#how" data-i18n="nav.how">How It Works</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang">
+          <button class="lang__btn" id="langBtn" aria-haspopup="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m6.9 6h-3a15 15 0 0 0-1.3-3.6A8 8 0 0 1 18.9 8M12 4c.8 1.2 1.4 2.5 1.8 4h-3.6c.4-1.5 1-2.8 1.8-4M4.3 14a8 8 0 0 1 0-4h3.4a17 17 0 0 0 0 4zm.8 2h3a15 15 0 0 0 1.3 3.6A8 8 0 0 1 5.1 16m3-8h-3a8 8 0 0 1 4.2-3.6A15 15 0 0 0 8.1 8M12 20c-.8-1.2-1.4-2.5-1.8-4h3.6c-.4 1.5-1 2.8-1.8 4m2.3-6H9.7a15 15 0 0 1 0-4h4.6a15 15 0 0 1 0 4m.6 5.6a15 15 0 0 0 1.3-3.6h3a8 8 0 0 1-4.3 3.6m1.7-5.6a17 17 0 0 0 0-4h3.4a8 8 0 0 1 0 4z"/></svg>
+            <span id="langCurrent">TR</span>
+          </button>
+          <div class="lang__menu" id="langMenu">
+            <button data-lang="tr">Türkçe</button>
+            <button data-lang="en">English</button>
+            <button data-lang="ar">العربية</button>
+          </div>
+        </div>
+        <a class="btn btn--wa header__wa" data-i18n="cta.whatsapp" data-wa-greet href="#contact" target="_blank" rel="noopener">WhatsApp</a>
+        <button class="burger" id="burger" data-i18n-aria="nav.fleet" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="img/brand/hero-car.png" alt="" />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__kicker reveal"><span class="dot"></span><span data-i18n="hero.kicker">Istanbul</span></p>
+        <h1 class="hero__title reveal" data-i18n="hero.title">With you, wherever you are</h1>
+        <p class="hero__sub reveal" data-i18n="hero.sub">Comfortable, safe car rental across Istanbul.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#fleet" data-i18n="hero.viewFleet">View the Fleet</a>
+          <a class="btn btn--ghost" href="#contact" data-i18n="hero.callUs">Message Us</a>
+        </div>
+        <ul class="trust reveal">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5z"/></svg><span data-i18n="trust.support">24/7 WhatsApp Support</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 16l9-7V4a1.5 1.5 0 0 1 3 0v5l9 7v2l-9-3v4l2 1v2l-4-1-4 1v-2l2-1v-4l-9 3z"/></svg><span data-i18n="trust.airport">Airport Delivery</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5zm-1.2 14L7 11.2l1.4-1.4 2.4 2.4 5-5L17 8.6z"/></svg><span data-i18n="trust.insured">Fully Insured Cars</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 13l1-5h11l3 3h3v5h-2a3 3 0 0 1-6 0H8a3 3 0 0 1-5 0zm14 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M6 13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/></svg><span data-i18n="trust.delivery">Delivery Across Istanbul</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== FLEET ===================== -->
+    <section class="section" id="fleet">
+      <div class="container">
+        <header class="sec-head reveal">
+          <h2 class="sec-title" data-i18n="fleet.title">Our Fleet</h2>
+          <p class="sec-sub" data-i18n="fleet.sub">A car for every need.</p>
+        </header>
+        <div class="filters reveal" id="filters">
+          <button data-filter="all" class="active" data-i18n="filter.all">All</button>
+          <button data-filter="economy" data-i18n="filter.economy">Economy</button>
+          <button data-filter="sedan" data-i18n="filter.sedan">Sedan</button>
+          <button data-filter="suv" data-i18n="filter.suv">SUV</button>
+        </div>
+        <div class="fleet-grid reveal" id="fleetGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <header class="sec-head reveal">
+          <h2 class="sec-title" data-i18n="services.title">Our Services</h2>
+          <p class="sec-sub" data-i18n="services.sub">More than just rentals.</p>
+        </header>
+        <div class="cards-4">
+          <article class="info reveal">
+            <span class="info__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 16l9-7V4a1.5 1.5 0 0 1 3 0v5l9 7v2l-9-3v4l2 1v2l-4-1-4 1v-2l2-1v-4l-9 3z"/></svg></span>
+            <h3 data-i18n="svc.airport.t">Airport Delivery</h3>
+            <p data-i18n="svc.airport.d"></p>
+          </article>
+          <article class="info reveal">
+            <span class="info__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10v2l-1 3v13H8V7L7 4zm3 6v9h4V8z"/></svg></span>
+            <h3 data-i18n="svc.longterm.t">Long-Term Rental</h3>
+            <p data-i18n="svc.longterm.d"></p>
+          </article>
+          <article class="info reveal">
+            <span class="info__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 13l1-5h11l3 3h3v5h-2a3 3 0 0 1-6 0H8a3 3 0 0 1-5 0zm14 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M6 13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/></svg></span>
+            <h3 data-i18n="svc.delivery.t">Door Delivery</h3>
+            <p data-i18n="svc.delivery.d"></p>
+          </article>
+          <article class="info reveal">
+            <span class="info__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 5v5l4 2-.8 1.7L11 13z"/></svg></span>
+            <h3 data-i18n="svc.support.t">24/7 Support</h3>
+            <p data-i18n="svc.support.d"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY ===================== -->
+    <section class="section" id="why">
+      <div class="container">
+        <header class="sec-head reveal">
+          <h2 class="sec-title" data-i18n="why.title">Why Al Sultan?</h2>
+          <p class="sec-sub" data-i18n="why.sub"></p>
+        </header>
+        <div class="cards-4">
+          <article class="why reveal"><span class="why__n">01</span><h3 data-i18n="why.1.t"></h3><p data-i18n="why.1.d"></p></article>
+          <article class="why reveal"><span class="why__n">02</span><h3 data-i18n="why.2.t"></h3><p data-i18n="why.2.d"></p></article>
+          <article class="why reveal"><span class="why__n">03</span><h3 data-i18n="why.3.t"></h3><p data-i18n="why.3.d"></p></article>
+          <article class="why reveal"><span class="why__n">04</span><h3 data-i18n="why.4.t"></h3><p data-i18n="why.4.d"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <header class="sec-head reveal">
+          <h2 class="sec-title" data-i18n="how.title">How It Works</h2>
+          <p class="sec-sub" data-i18n="how.sub"></p>
+        </header>
+        <div class="steps">
+          <article class="step reveal"><span class="step__n">1</span><h3 data-i18n="how.1.t"></h3><p data-i18n="how.1.d"></p></article>
+          <article class="step reveal"><span class="step__n">2</span><h3 data-i18n="how.2.t"></h3><p data-i18n="how.2.d"></p></article>
+          <article class="step reveal"><span class="step__n">3</span><h3 data-i18n="how.3.t"></h3><p data-i18n="how.3.d"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <header class="sec-head reveal">
+          <h2 class="sec-title" data-i18n="faq.title">FAQ</h2>
+        </header>
+        <div class="faq reveal">
+          <details><summary data-i18n="faq.1.q"></summary><p data-i18n="faq.1.a"></p></details>
+          <details><summary data-i18n="faq.2.q"></summary><p data-i18n="faq.2.a"></p></details>
+          <details><summary data-i18n="faq.3.q"></summary><p data-i18n="faq.3.a"></p></details>
+          <details><summary data-i18n="faq.4.q"></summary><p data-i18n="faq.4.a"></p></details>
+          <details><summary data-i18n="faq.5.q"></summary><p data-i18n="faq.5.a"></p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <header class="sec-head reveal">
+          <h2 class="sec-title" data-i18n="contact.title">Contact</h2>
+          <p class="sec-sub" data-i18n="contact.sub"></p>
+        </header>
+        <div class="contact">
+          <div class="contact__info reveal">
+            <ul class="contact__list">
+              <li><span class="contact__lbl" data-i18n="contact.address">Address</span><span class="contact__val">Park Mavera 2, Gazi Yaşargil Cd, A2 Blok No:60, Kayabaşı, 34494 Başakşehir / İstanbul</span></li>
+              <li><span class="contact__lbl" data-i18n="contact.hours">Hours</span><span class="contact__val" data-i18n="contact.hoursVal"></span></li>
+              <li><span class="contact__lbl" data-i18n="contact.phone">WhatsApp</span><a class="contact__val" id="waContact" href="#" target="_blank" rel="noopener"></a></li>
+              <li><span class="contact__lbl" data-i18n="contact.email">Email</span><a class="contact__val" href="mailto:info@alsultancars.com">info@alsultancars.com</a></li>
+            </ul>
+            <iframe class="contact__map" title="Al Sultan Rent a Car location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <form class="quote reveal" id="quoteForm" autocomplete="on">
+            <h3 class="quote__title" data-i18n="form.title">Request a Quote</h3>
+            <div class="field"><label data-i18n="form.name">Name</label><input name="name" type="text" required data-i18n-ph="form.name" /></div>
+            <div class="field"><label data-i18n="form.phone">Phone</label><input name="phone" type="tel" required data-i18n-ph="form.phone" /></div>
+            <div class="field"><label data-i18n="form.car">Car</label><select name="car" id="formCar"></select></div>
+            <div class="row2">
+              <div class="field"><label data-i18n="form.pickup">Pick-up</label><input name="pickup" type="date" /></div>
+              <div class="field"><label data-i18n="form.dropoff">Drop-off</label><input name="dropoff" type="date" /></div>
+            </div>
+            <div class="field"><label data-i18n="form.note">Note</label><input name="note" type="text" data-i18n-ph="form.note" /></div>
+            <button type="submit" class="btn btn--wa btn--block">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2m5.3 13.9c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.9-1.2a9 9 0 0 1-3.4-3.5c-.3-.5-1-1.6-1-3s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5c-.2.2-.4.4-.2.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.2.1.4.2.4.3z"/></svg>
+              <span data-i18n="form.send">Send on WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__row">
+      <div>
+        <a class="logo logo--footer" href="#top" aria-label="Al Sultan Rent a Car">
+          <span class="logo__badge"><span class="logo__c">Al</span><span class="logo__rest">&nbsp;Sultan</span></span>
+          <span class="logo__sub">RENT A CAR</span>
+        </a>
+        <p class="footer__tag" data-i18n="footer.tagline"></p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#fleet" data-i18n="nav.fleet">Fleet</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> Al Sultan Rent a Car · <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span class="footer__made" data-i18n="footer.made">Made by Klyro</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="fab" id="fabWa" data-wa-greet href="#contact" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2m5.3 13.9c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.9-1.2a9 9 0 0 1-3.4-3.5c-.3-.5-1-1.6-1-3s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5c-.2.2-.4.4-.2.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.2.1.4.2.4.3z"/></svg>
+  </a>
+
+  <!-- ===================== CAR DETAIL MODAL ===================== -->
+  <div class="cdmodal" id="carModal" role="dialog" aria-modal="true">
+    <div class="cdmodal__panel">
+      <button class="cdmodal__close" data-close aria-label="Close">✕</button>
+      <div class="cdmodal__gallery">
+        <div class="cdmodal__stage">
+          <button class="gnav gnav--prev" data-prev aria-label="Previous">‹</button>
+          <img id="cdMain" src="" alt="" />
+          <button class="gnav gnav--next" data-next aria-label="Next">›</button>
+          <span class="cdmodal__count" id="cdCount"></span>
+        </div>
+        <div class="cdmodal__thumbs" id="cdThumbs"></div>
+      </div>
+      <div class="cdmodal__info">
+        <span class="cdmodal__badge" id="cdBadge"></span>
+        <h3 class="cdmodal__title" id="cdTitle"></h3>
+        <p class="cdmodal__desc" id="cdDesc"></p>
+        <h4 class="cdmodal__h" data-i18n="detail.spec">Specifications</h4>
+        <ul class="cdmodal__specs" id="cdSpecs"></ul>
+        <h4 class="cdmodal__h" data-i18n="detail.feat">Features</h4>
+        <ul class="cdmodal__features" id="cdFeatures"></ul>
+        <a class="btn btn--wa btn--block cdmodal__book" id="cdBook" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2m5.3 13.9c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.9-1.2a9 9 0 0 1-3.4-3.5c-.3-.5-1-1.6-1-3s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5c-.2.2-.4.4-.2.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.2.1.4.2.4.3z"/></svg>
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PHOTO LIGHTBOX (photo only) ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" data-lbclose aria-label="Close">✕</button>
+    <span class="lightbox__count" id="lbCount"></span>
+    <div class="lightbox__stage">
+      <button class="gnav gnav--prev" data-prev aria-label="Previous">‹</button>
+      <img id="lbMain" src="" alt="" />
+      <button class="gnav gnav--next" data-next aria-label="Next">›</button>
+    </div>
+    <div class="lightbox__thumbs" id="lbThumbs"></div>
+  </div>
+
+  <script src="app.js?v=20"></script>
+  <script>
+    // wire contact WhatsApp link + map embed after data loads
+    document.addEventListener("DOMContentLoaded", () => {
+      const wa = document.getElementById("waContact");
+      if (wa) {
+        wa.href = "https://wa.me/" + CONFIG.whatsapp;
+        const n = CONFIG.whatsapp;
+        wa.textContent = n.includes("X")
+          ? "+" + n.replace(/X+/, "… (to confirm)")
+          : "+" + n.replace(/^(\d{2})(\d{3})(\d{3})(\d{2})(\d{2})$/, "$1 $2 $3 $4 $5");
+      }
+      const map = document.querySelector(".contact__map");
+      if (map) map.src = CONFIG.mapEmbed;
+    });
+  </script>
+</body>
+</html>

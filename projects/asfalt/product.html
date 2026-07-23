@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — ASFALT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23101010'/><text y='72' x='50' text-anchor='middle' font-size='60' fill='%23c9f21b' font-family='sans-serif' font-weight='900'>A</text></svg>">
+</head>
+<body>
+
+  <div class="ticker"><div class="ticker-inner" id="ticker"></div></div>
+
+  <header class="site-head">
+    <div class="wrap head-in">
+      <a class="logo" href="index.html">ASFALT<span class="star">★</span></a>
+      <nav class="nav-desk">
+        <a href="index.html" data-i18n="nav_home"></a>
+        <a href="shop.html" data-i18n="nav_shop"></a>
+        <a href="index.html#drop" data-i18n="nav_drop"></a>
+        <a href="index.html#about" data-i18n="nav_about"></a>
+      </nav>
+      <div class="head-tools">
+        <div class="lang-sw">
+          <button data-lang="en">EN</button>
+          <button data-lang="tr">TR</button>
+          <button data-lang="ar">ع</button>
+        </div>
+        <button class="bag-btn" onclick="openCart()">
+          <span data-i18n="cart_title"></span>
+          <span class="bag-count">0</span>
+        </button>
+        <button class="burger" aria-label="menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mnav" id="mnav">
+    <button class="m-close">✕</button>
+    <a href="index.html" data-i18n="nav_home"></a>
+    <a href="shop.html" data-i18n="nav_shop"></a>
+    <a href="index.html#drop" data-i18n="nav_drop"></a>
+    <a href="index.html#about" data-i18n="nav_about"></a>
+  </div>
+
+  <div class="wrap">
+    <a class="crumb mono" href="shop.html" data-i18n="back_shop"></a>
+    <div class="pd-grid" id="pdGrid"></div>
+  </div>
+
+  <section class="wrap" id="relatedSec">
+    <div class="sec-head">
+      <h2 class="disp" data-i18n="p_related"></h2>
+    </div>
+    <div class="p-grid" id="relGrid"></div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-wordmark">ASFALT</div>
+      <div class="foot-base">
+        <span>© 2026 ASFALT</span>
+        <span data-i18n="footer_note"></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <h3 data-i18n="cart_title"></h3>
+      <button onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot" id="cartFoot">
+      <div class="cart-total-row"><span data-i18n="cart_total"></span><span id="cartTotal"></span></div>
+      <p class="cart-note" data-i18n="cart_note"></p>
+      <button class="btn cart-wa" onclick="checkoutWA()" data-i18n="cart_wa"></button>
+    </div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    const pid = new URLSearchParams(location.search).get("id");
+    const prod = PRODUCTS.find(p => p.id === pid) || PRODUCTS[0];
+    let selSize = prod.sizes[0] || null;
+    let qty = 1;
+
+    function renderProduct() {
+      const { t, fmt, img, lang } = ASFALT;
+
+      const tk = t("ticker") + " " + t("ticker");
+      document.getElementById("ticker").innerHTML = `<span>${tk}</span>`;
+
+      document.body.dataset.title = prod.name[lang];
+      document.title = `${prod.name[lang]} — ASFALT`;
+
+      const gallery = Array.from({ length: prod.imgs }, (_, i) =>
+        `<img src="${img(prod, i + 1)}" alt="${prod.name[lang]} ${i + 1}">`).join("");
+
+      const sizes = prod.sizes.length
+        ? `<span class="opt-label">${t("p_size")}</span>
+           <div class="size-grid">
+             ${prod.sizes.map(s => `<button class="size-btn ${s === selSize ? "on" : ""}" data-size="${s}">${s}</button>`).join("")}
+           </div>`
+        : `<span class="opt-label">${t("p_onesize")}</span>`;
+
+      document.getElementById("pdGrid").innerHTML = `
+        <div class="pd-gallery">${gallery}</div>
+        <div class="pd-info">
+          <span class="mono pd-cat">${CATS[prod.cat][lang]} — ASF-D04-${prod.id.slice(1)}</span>
+          <h1 class="disp pd-title">${prod.name[lang]}</h1>
+          <div class="pd-price">${fmt(prod.price)}</div>
+          <p class="pd-desc">${prod.desc[lang]}</p>
+          ${sizes}
+          <div class="qty-row">
+            <span class="opt-label" style="margin:0">${t("p_qty")}</span>
+            <div class="qty-box">
+              <button id="qMinus">−</button><span id="qVal">${qty}</span><button id="qPlus">+</button>
+            </div>
+          </div>
+          <button class="btn pd-add" id="addBtn">★ ${t("p_add")} — ${fmt(prod.price)}</button>
+          <ul class="pd-details">
+            <li>${t("p_detail1")}</li>
+            <li>${t("p_detail2")}</li>
+            <li>${t("p_detail3")}</li>
+          </ul>
+        </div>`;
+
+      document.querySelectorAll(".size-btn").forEach(b =>
+        b.addEventListener("click", () => { selSize = b.dataset.size; renderProduct(); }));
+      document.getElementById("qMinus").onclick = () => { if (qty > 1) { qty--; renderProduct(); } };
+      document.getElementById("qPlus").onclick = () => { qty++; renderProduct(); };
+      document.getElementById("addBtn").onclick = () => addToCart(prod.id, selSize, qty);
+
+      // related: same category first, then others
+      const rel = [...PRODUCTS.filter(p => p.cat === prod.cat && p.id !== prod.id),
+                   ...PRODUCTS.filter(p => p.cat !== prod.cat)].slice(0, 4);
+      document.getElementById("relGrid").innerHTML = rel.map((p, i) => productCard(p, i + 1)).join("");
+
+      watchReveals();
+    }
+    document.addEventListener("asfalt:ready", renderProduct);
+    document.addEventListener("asfalt:lang", renderProduct);
+  </script>
+</body>
+</html>

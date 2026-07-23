@@ -1,0 +1,834 @@
+{
+  "categories": [
+    {
+      "id": "burger",
+      "slug": "burger",
+      "emo": "🍔",
+      "thumb": "egg-buster-double.jpg",
+      "t": {
+        "tr": "Burgerler",
+        "en": "Burgers",
+        "ar": "برجر"
+      },
+      "items": [
+        {
+          "tr": "Prime Burger Double",
+          "en": "Prime Burger Double",
+          "ar": "برايم برجر دابل",
+          "p": 650,
+          "img": "prime-burger-double.jpg",
+          "e": "🍔",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri, mantar, karamelize soğan, dana pastırması ve 8one sos.",
+            "en": "150g beef, 8one signature bun, cheddar, mushrooms, caramelized onion, beef pastrami and 8one sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز برجر 8one، شيدر، فطر، بصل مكرمل، بسطرمة بقري وصوص 8one."
+          }
+        },
+        {
+          "tr": "Egg Buster Double",
+          "en": "Egg Buster Double",
+          "ar": "إيغ باستر دابل",
+          "p": 495,
+          "img": "egg-buster-double.jpg",
+          "e": "🍳",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri, tereyağlı yumurta, karamelize soğan ve 8one sos.",
+            "en": "150g beef, 8one bun, cheddar, buttery fried egg, caramelized onion and 8one sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، بيضة بالزبدة، بصل مكرمل وصوص 8one."
+          }
+        },
+        {
+          "tr": "Smash Onion Double",
+          "en": "Smash Onion Double",
+          "ar": "سماش أونيون دابل",
+          "p": 495,
+          "img": "smash-onion-double.jpg",
+          "e": "🧅",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri, bol karamelize soğan ve 8one sos.",
+            "en": "150g beef, 8one bun, cheddar, plenty of caramelized onion and 8one sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، بصل مكرمل وفير وصوص 8one."
+          }
+        },
+        {
+          "tr": "Truffle Double",
+          "en": "Truffle Double",
+          "ar": "ترافل دابل",
+          "p": 625,
+          "img": "truffle-double.jpg",
+          "e": "🍄",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri, mantar ve trüf soslu.",
+            "en": "150g beef, 8one bun, cheddar, mushrooms and truffle sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، فطر وصوص الكمأة (ترافل)."
+          }
+        },
+        {
+          "tr": "Mushmore Double",
+          "en": "Mushmore Double",
+          "ar": "مشمور دابل",
+          "p": 525,
+          "img": "mushmore-double.jpg",
+          "e": "🍄",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri, mantar ve 8one sos.",
+            "en": "150g beef, 8one bun, cheddar, mushrooms and 8one sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، فطر وصوص 8one."
+          }
+        },
+        {
+          "tr": "Spicy Burger Double",
+          "en": "Spicy Burger Double",
+          "ar": "سبايسي برجر دابل",
+          "p": 510,
+          "img": "spicy-burger-double.jpg",
+          "e": "🌶️",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri, jalapeño turşusu ve 8one sos.",
+            "en": "150g beef, 8one bun, cheddar, pickled jalapeño and 8one sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، مخلل هالبينو وصوص 8one."
+          }
+        },
+        {
+          "tr": "Chezzy Burger Double",
+          "en": "Chezzy Burger Double",
+          "ar": "تشيزي برجر دابل",
+          "p": 480,
+          "img": "chezzy-burger-double.jpg",
+          "e": "🧀",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one özel burger ekmeği, cheddar peyniri ve 8one sos.",
+            "en": "150g beef, 8one bun, cheddar and 8one sauce.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر وصوص 8one."
+          }
+        },
+        {
+          "tr": "Ekstra Köfte (1 Parça)",
+          "en": "Extra Patty (1 pc)",
+          "ar": "قطعة لحم إضافية",
+          "p": 155,
+          "img": "extra-patty.jpg",
+          "e": "🥩",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Burgerinize ekstra köfte (1 parça).",
+            "en": "Add an extra beef patty (1 piece) to your burger.",
+            "ar": "قطعة لحم إضافية لبرجرك."
+          }
+        },
+        {
+          "tr": "Ekstra Peynir (1 Parça)",
+          "en": "Extra Cheese (1 pc)",
+          "ar": "قطعة جبنة إضافية",
+          "p": 30,
+          "img": "extra-cheese.jpg",
+          "e": "🧀",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Burgerinize ekstra peynir (1 parça).",
+            "en": "Add an extra slice of cheese (1 piece).",
+            "ar": "قطعة جبنة إضافية لبرجرك."
+          }
+        }
+      ]
+    },
+    {
+      "id": "combo",
+      "slug": "combo",
+      "emo": "🍟",
+      "thumb": "squad-combo.jpg",
+      "t": {
+        "tr": "Combolar",
+        "en": "Combos",
+        "ar": "كومبو"
+      },
+      "items": [
+        {
+          "tr": "Squad Combo",
+          "en": "Squad Combo",
+          "ar": "سكواد كومبو",
+          "p": 1550,
+          "img": "squad-combo.jpg",
+          "e": "👨‍👩‍👧‍👦",
+          "hot": true,
+          "soldOut": false,
+          "badge": "NEW",
+          "desc": {
+            "tr": "3 Cheezy Burger, 1 Belçika Patates, 1 Animal Fries, 6 Tavuk Nugget, 6 Soğan Halkası, 3 8one sos, 3 acı sos.",
+            "en": "3 Cheezy Burgers, 1 Belgian Fries, 1 Animal Fries, 6 Chicken Nuggets, 6 Onion Rings, 3 8one sauces, 3 spicy sauces.",
+            "ar": "٣ تشيزي برجر، بطاطس بلجيكية، أنيمال فرايز، ٦ ناغتس، ٦ حلقات بصل، ٣ صوص 8one، ٣ صوص حار."
+          }
+        },
+        {
+          "tr": "Couple Combo",
+          "en": "Couple Combo",
+          "ar": "كابل كومبو",
+          "p": 995,
+          "img": "couple-combo.jpg",
+          "e": "🍔",
+          "hot": true,
+          "soldOut": false,
+          "badge": "NEW",
+          "desc": {
+            "tr": "2 Cheezy Burger, 1 Belçika Patates, 1 Patates, 4 Tavuk Nugget, 4 Soğan Halkası, 2 8one sos, 2 acı sos.",
+            "en": "2 Cheezy Burgers, 1 Belgian Fries, 1 Fries, 4 Chicken Nuggets, 4 Onion Rings, 2 8one sauces, 2 spicy sauces.",
+            "ar": "٢ تشيزي برجر، بطاطس بلجيكية، بطاطس، ٤ ناغتس، ٤ حلقات بصل، ٢ صوص 8one، ٢ صوص حار."
+          }
+        },
+        {
+          "tr": "Combo 225g",
+          "en": "Combo 225g",
+          "ar": "كومبو 225غ",
+          "p": 740,
+          "img": "combo-225-g.jpg",
+          "e": "🍔",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "225gr dana eti, 8one ekmeği, cheddar, 8one sos, patates kızartması ve ayran.",
+            "en": "225g beef, 8one bun, cheddar, 8one sauce, fries and an ayran.",
+            "ar": "٢٢٥غ لحم بقري، خبز 8one، شيدر، صوص 8one، بطاطس وعيران."
+          }
+        },
+        {
+          "tr": "Combo 225g",
+          "en": "Combo 225g",
+          "ar": "كومبو 225غ",
+          "p": 740,
+          "img": "combo-225-g-2.jpg",
+          "e": "🍔",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "225gr dana eti, 8one ekmeği, cheddar, 8one sos, patates kızartması ve Cola.",
+            "en": "225g beef, 8one bun, cheddar, 8one sauce, fries and a Cola.",
+            "ar": "٢٢٥غ لحم بقري، خبز 8one، شيدر، صوص 8one، بطاطس وكولا."
+          }
+        },
+        {
+          "tr": "Combo 3",
+          "en": "Combo 3",
+          "ar": "كومبو 3",
+          "p": 590,
+          "img": "combo-3.jpg",
+          "e": "🍔",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one ekmeği, cheddar, 8one sos, patates kızartması ve Cola.",
+            "en": "150g beef, 8one bun, cheddar, 8one sauce, fries and a Cola.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، صوص 8one، بطاطس وكولا."
+          }
+        },
+        {
+          "tr": "Combo 4",
+          "en": "Combo 4",
+          "ar": "كومبو 4",
+          "p": 590,
+          "img": "combo-4.jpg",
+          "e": "🍔",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "150gr dana eti, 8one ekmeği, cheddar, 8one sos, patates kızartması ve ayran.",
+            "en": "150g beef, 8one bun, cheddar, 8one sauce, fries and an ayran.",
+            "ar": "١٥٠غ لحم بقري، خبز 8one، شيدر، صوص 8one، بطاطس وعيران."
+          }
+        },
+        {
+          "tr": "Combo 1",
+          "en": "Combo 1",
+          "ar": "كومبو 1",
+          "p": 430,
+          "img": "combo-1.jpg",
+          "e": "🍔",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "75gr dana eti, 8one ekmeği, cheddar, 8one sos, patates kızartması ve Cola.",
+            "en": "75g beef, 8one bun, cheddar, 8one sauce, fries and a Cola.",
+            "ar": "٧٥غ لحم بقري، خبز 8one، شيدر، صوص 8one، بطاطس وكولا."
+          }
+        },
+        {
+          "tr": "Combo 2",
+          "en": "Combo 2",
+          "ar": "كومبو 2",
+          "p": 430,
+          "img": "combo-2.jpg",
+          "e": "🍔",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "75gr dana eti, 8one ekmeği, cheddar, 8one sos, patates kızartması ve ayran.",
+            "en": "75g beef, 8one bun, cheddar, 8one sauce, fries and an ayran.",
+            "ar": "٧٥غ لحم بقري، خبز 8one، شيدر، صوص 8one، بطاطس وعيران."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids",
+      "slug": "kids",
+      "emo": "🧒",
+      "thumb": "boy-s-meal-burger.jpeg",
+      "t": {
+        "tr": "Çocuk Menüsü",
+        "en": "Kids Meals",
+        "ar": "وجبات الأطفال"
+      },
+      "items": [
+        {
+          "tr": "Erkek Çocuk Menüsü (Burger)",
+          "en": "Boy's Meal (Burger)",
+          "ar": "وجبة الأولاد (برجر)",
+          "p": 395,
+          "img": "boy-s-meal-burger.jpeg",
+          "e": "👦",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Dana etli burger, 8one ekmeği, cheddar, 8one sos, patates kızartması, meyve suyu ve oyuncak.",
+            "en": "Beef burger, 8one bun, cheddar, 8one sauce, fries, a fruit juice and a toy.",
+            "ar": "برجر لحم، خبز 8one، شيدر، صوص 8one، بطاطس، عصير ولعبة."
+          }
+        },
+        {
+          "tr": "Kız Çocuk Menüsü (Burger)",
+          "en": "Girl's Meal (Burger)",
+          "ar": "وجبة البنات (برجر)",
+          "p": 395,
+          "img": "girl-s-meal-burger.jpeg",
+          "e": "👧",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Dana etli burger, 8one ekmeği, cheddar, 8one sos, patates kızartması, meyve suyu ve oyuncak.",
+            "en": "Beef burger, 8one bun, cheddar, 8one sauce, fries, a fruit juice and a toy.",
+            "ar": "برجر لحم، خبز 8one، شيدر، صوص 8one، بطاطس، عصير ولعبة."
+          }
+        },
+        {
+          "tr": "Erkek Çocuk Menüsü (Nugget)",
+          "en": "Boy's Meal (Nugget)",
+          "ar": "وجبة الأولاد (ناغتس)",
+          "p": 250,
+          "img": "boy-s-meal-nugget.jpeg",
+          "e": "🍗",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Tavuk nugget, patates kızartması, meyve suyu ve oyuncak.",
+            "en": "Chicken nuggets, fries, a fruit juice and a toy.",
+            "ar": "ناغتس دجاج، بطاطس، عصير ولعبة."
+          }
+        },
+        {
+          "tr": "Kız Çocuk Menüsü (Nugget)",
+          "en": "Girl's Meal (Nugget)",
+          "ar": "وجبة البنات (ناغتس)",
+          "p": 250,
+          "img": "girl-s-meal-nugget.jpeg",
+          "e": "🍗",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Tavuk nugget, patates kızartması, meyve suyu ve oyuncak.",
+            "en": "Chicken nuggets, fries, a fruit juice and a toy.",
+            "ar": "ناغتس دجاج، بطاطس، عصير ولعبة."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fries",
+      "slug": "fries",
+      "emo": "🍟",
+      "thumb": "animal-fries.jpg",
+      "t": {
+        "tr": "Patates & Kızartma",
+        "en": "Fries",
+        "ar": "بطاطس"
+      },
+      "items": [
+        {
+          "tr": "Animal Fries",
+          "en": "Animal Fries",
+          "ar": "أنيمال فرايز",
+          "p": 225,
+          "img": "animal-fries.jpg",
+          "e": "🧀",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Patates kızartması, cheddar peyniri, karamelize soğan, jalapeño turşusu ve 8one sos.",
+            "en": "Fries loaded with cheddar, caramelized onion, pickled jalapeño and 8one sauce.",
+            "ar": "بطاطس مغطاة بالشيدر والبصل المكرمل ومخلل الهالبينو وصوص 8one."
+          }
+        },
+        {
+          "tr": "Tatlı Patates",
+          "en": "Sweet Potato Fries",
+          "ar": "بطاطا حلوة مقلية",
+          "p": 175,
+          "img": "sweet-fries.jpg",
+          "e": "🍠",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Çıtır tatlı patates kızartması.",
+            "en": "Crispy sweet-potato fries.",
+            "ar": "بطاطا حلوة مقلية ومقرمشة."
+          }
+        },
+        {
+          "tr": "Belçika Patates",
+          "en": "Belgian Fries",
+          "ar": "بطاطس بلجيكية",
+          "p": 150,
+          "img": "belgian-fries.jpg",
+          "e": "🍟",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Patates Kızartması",
+          "en": "Fries",
+          "ar": "بطاطس مقلية",
+          "p": 95,
+          "img": "fries.jpg",
+          "e": "🍟",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "Klasik çıtır patates kızartması.",
+            "en": "Classic crispy fries.",
+            "ar": "بطاطس مقلية مقرمشة كلاسيكية."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "slug": "sides",
+      "emo": "🧅",
+      "thumb": "mozzarella-sticks.jpeg",
+      "t": {
+        "tr": "Yan Ürünler",
+        "en": "Sides",
+        "ar": "أطباق جانبية"
+      },
+      "items": [
+        {
+          "tr": "Mozzarella Çubukları",
+          "en": "Mozzarella Sticks",
+          "ar": "أصابع الموزاريلا",
+          "p": 150,
+          "img": "mozzarella-sticks.jpeg",
+          "e": "🧀",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "5 parça çıtır mozzarella çubuğu.",
+            "en": "5 crispy mozzarella sticks.",
+            "ar": "٥ أصابع موزاريلا مقرمشة."
+          }
+        },
+        {
+          "tr": "Tavuk Nugget",
+          "en": "Chicken Nuggets",
+          "ar": "ناغتس الدجاج",
+          "p": 150,
+          "img": "chicken-nuggets.jpeg",
+          "e": "🍗",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "6 parça çıtır tavuk nugget.",
+            "en": "6 crispy chicken nuggets.",
+            "ar": "٦ قطع ناغتس دجاج مقرمشة."
+          }
+        },
+        {
+          "tr": "Soğan Halkası",
+          "en": "Onion Rings",
+          "ar": "حلقات البصل",
+          "p": 125,
+          "img": "onion-rings.jpeg",
+          "e": "🧅",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": {
+            "tr": "6 parça çıtır soğan halkası.",
+            "en": "6 crispy onion rings.",
+            "ar": "٦ حلقات بصل مقرمشة."
+          }
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "slug": "drinks",
+      "emo": "🥤",
+      "thumb": "ayran.jpg",
+      "t": {
+        "tr": "İçecekler",
+        "en": "Drinks",
+        "ar": "مشروبات"
+      },
+      "items": [
+        {
+          "tr": "Ayran",
+          "en": "Ayran",
+          "ar": "عيران",
+          "p": 65,
+          "img": "ayran.jpg",
+          "e": "🥛",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Cola Turka 330ml",
+          "en": "Cola Turka 330ml",
+          "ar": "كولا تركا 330مل",
+          "p": 60,
+          "img": "cola-turka-330ml.jpg",
+          "e": "🥤",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Cola Turka 200ml",
+          "en": "Cola Turka 200ml",
+          "ar": "كولا تركا 200مل",
+          "p": 60,
+          "img": "cola-turka-200ml.jpg",
+          "e": "🥤",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Şekersiz Kola",
+          "en": "Sugar-Free Cola",
+          "ar": "كولا دايت",
+          "p": 60,
+          "img": "sekersiz-kola.jpg",
+          "e": "🥤",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Sarıyer Portakal",
+          "en": "Sarıyer Orange Soda",
+          "ar": "صودا برتقال صاريّر",
+          "p": 60,
+          "img": "sariyer-portakal.jpg",
+          "e": "🍊",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Gazoz",
+          "en": "Gazoz",
+          "ar": "غازوز",
+          "p": 55,
+          "img": "gazoz.jpg",
+          "e": "🥤",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Soda",
+          "en": "Sparkling Water",
+          "ar": "صودا",
+          "p": 45,
+          "img": "soda.jpg",
+          "e": "💦",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Meyve Suyu",
+          "en": "Fruit Juice",
+          "ar": "عصير فواكه",
+          "p": 40,
+          "img": "meyve-suyu.jpg",
+          "e": "🧃",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Su",
+          "en": "Water",
+          "ar": "ماء",
+          "p": 35,
+          "img": "su.jpg",
+          "e": "💧",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        }
+      ]
+    },
+    {
+      "id": "sweets",
+      "slug": "sweets",
+      "emo": "🍰",
+      "thumb": "pistachio-tiramisu.jpg",
+      "t": {
+        "tr": "Tatlılar",
+        "en": "Sweets",
+        "ar": "حلويات"
+      },
+      "items": [
+        {
+          "tr": "Fıstıklı Tiramisu",
+          "en": "Pistachio Tiramisu",
+          "ar": "تيراميسو بالفستق",
+          "p": 315,
+          "img": "pistachio-tiramisu.jpg",
+          "e": "🍮",
+          "hot": true,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Sebastian Oreo",
+          "en": "Sebastian Oreo",
+          "ar": "سيباستيان أوريو",
+          "p": 330,
+          "img": "sebastian-oreo.jpeg",
+          "e": "🍪",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Lotus",
+          "en": "Lotus",
+          "ar": "لوتس",
+          "p": 330,
+          "img": "lotus-2.jpeg",
+          "e": "🍪",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Tiramisu",
+          "en": "Tiramisu",
+          "ar": "تيراميسو",
+          "p": 265,
+          "img": "tiramisu.jpg",
+          "e": "🍰",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Karamelli Krema",
+          "en": "Caramel Cream",
+          "ar": "كريمة الكراميل",
+          "p": 245,
+          "img": "caramel-cream.jpeg",
+          "e": "🍮",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Sebastian Basbousa",
+          "en": "Sebastian Basbousa",
+          "ar": "سيباستيان بسبوسة",
+          "p": 225,
+          "img": "sebastian-basbousa.jpeg",
+          "e": "🍯",
+          "hot": false,
+          "soldOut": false,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Çikolatalı Cheesecake",
+          "en": "Chocolate Cheesecake",
+          "ar": "تشيز كيك بالشوكولاتة",
+          "p": 225,
+          "img": "chocolate-cheesecake.jpg",
+          "e": "🍰",
+          "hot": false,
+          "soldOut": true,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Lotus",
+          "en": "Lotus",
+          "ar": "لوتس",
+          "p": 250,
+          "img": "lotus.jpg",
+          "e": "🍪",
+          "hot": false,
+          "soldOut": true,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Brownie",
+          "en": "Brownie",
+          "ar": "براوني",
+          "p": 195,
+          "img": "brownie.jpg",
+          "e": "🍫",
+          "hot": false,
+          "soldOut": true,
+          "badge": "",
+          "desc": null
+        },
+        {
+          "tr": "Yaban Mersinli",
+          "en": "Blueberry",
+          "ar": "بلوبيري",
+          "p": 225,
+          "img": "blueberry.jpeg",
+          "e": "🫐",
+          "hot": false,
+          "soldOut": true,
+          "badge": "",
+          "desc": null
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "instagram": "https://www.instagram.com/8oneburger",
+    "tiktok": "https://www.tiktok.com/@8oneburger",
+    "facebook": "https://www.facebook.com/8oneburger",
+    "youtube": "https://www.youtube.com/@8oneBurger"
+  },
+  "branches": [
+    {
+      "id": "ortakoy",
+      "wa": "905372555558",
+      "maps": "https://maps.app.goo.gl/LukaMRtFrqyhVnC49",
+      "t": {
+        "tr": "Ortaköy",
+        "en": "Ortaköy",
+        "ar": "أورتاكوي"
+      },
+      "hours": "11:30 – 02:30"
+    },
+    {
+      "id": "fatih",
+      "wa": "905016377181",
+      "maps": "https://maps.app.goo.gl/YBbekBiY7nQnVJ9S9",
+      "t": {
+        "tr": "Fatih",
+        "en": "Fatih",
+        "ar": "الفاتح"
+      },
+      "hours": "11:30 – 02:30"
+    },
+    {
+      "id": "mahmutbey",
+      "wa": "905398818771",
+      "maps": "https://maps.app.goo.gl/gB71Wfp1xAYPeMS49",
+      "t": {
+        "tr": "Mahmutbey",
+        "en": "Mahmutbey",
+        "ar": "محمود بيه"
+      },
+      "hours": "11:30 – 04:00"
+    },
+    {
+      "id": "beylikduzu",
+      "wa": "905521088880",
+      "maps": "https://maps.app.goo.gl/jsyAZvmFzxbcJgdQA",
+      "t": {
+        "tr": "Beylikdüzü",
+        "en": "Beylikdüzü",
+        "ar": "بيليك دوزو"
+      },
+      "hours": "11:30 – 05:00"
+    },
+    {
+      "id": "basaksehir",
+      "wa": "905010010081",
+      "maps": "https://maps.app.goo.gl/ZfktrycdhKK6HUM1A",
+      "t": {
+        "tr": "Başakşehir",
+        "en": "Başakşehir",
+        "ar": "باشاك شهير"
+      },
+      "hours": "11:30 – 04:00"
+    }
+  ],
+  "analytics": {
+    "ga4": "",
+    "plausible": ""
+  }
+}

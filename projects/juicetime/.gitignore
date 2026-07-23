@@ -1,0 +1,10 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# private business docs — never deploy invoices/pricing/internal notes
+_private/
+*.invoice.*
+
+# scratch / extraction artifacts
+*.tmp

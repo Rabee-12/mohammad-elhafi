@@ -1,0 +1,12 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Node (if tooling is added later)
+node_modules/
+
+# Local env
+.env
+.env.*

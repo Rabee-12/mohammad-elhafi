@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>عصير تايم · Aseer Time — QR Code</title>
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{ --blue:#009dff; --blue-deep:#0a6bd6; --cream:#fff6ec; }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; min-height:100vh; font-family:"Baloo 2",system-ui,sans-serif; color:#14213a;
+    background:linear-gradient(135deg,#0a6bd6,#009dff 50%,#0a6bd6); background-size:200% 200%;
+    display:flex; flex-direction:column; align-items:center; padding:1.6rem 1rem 3rem;
+  }
+  .page-logo{ width:96px; height:auto; filter:drop-shadow(0 10px 24px rgba(0,0,0,.45)); }
+  h1{ color:#fff; font-weight:800; text-align:center; margin:.6rem 0 1.2rem; font-size:1.2rem; }
+  .panel{ background:var(--cream); border-radius:22px; padding:1.2rem; width:100%; max-width:420px; box-shadow:0 24px 60px -20px rgba(0,0,0,.5); }
+  label{ font-weight:700; font-size:.85rem; color:var(--blue-deep); display:block; margin:0 0 .35rem; }
+  input{ width:100%; padding:.7rem .9rem; border:2px solid #d8e2f2; border-radius:12px; font-family:inherit; font-size:.95rem; }
+  input:focus{ outline:none; border-color:var(--blue); }
+  button{ font-family:inherit; font-weight:800; border:none; cursor:pointer; border-radius:12px; }
+  .row{ display:flex; gap:.6rem; margin-top:.7rem; }
+  .gen{ flex:1; padding:.8rem; background:linear-gradient(135deg,var(--blue),var(--blue-deep)); color:#fff; }
+  .dl{ flex:1; padding:.8rem; background:#e43a38; color:#fff; }
+  .gen:active,.dl:active{ transform:scale(.98); }
+
+  /* the printable card */
+  .card{ margin:1.3rem auto 0; width:300px; background:#fff; border-radius:20px; padding:20px 18px 22px; text-align:center; box-shadow:0 10px 30px -12px rgba(5,56,107,.5); }
+  .card-logo{ width:120px; height:auto; margin:0 auto .7rem; display:block; }
+  canvas{ width:240px; height:240px; }
+  .scan{ margin-top:.7rem; font-weight:800; color:var(--blue-deep); font-size:1rem; }
+  .scan small{ display:block; font-weight:700; color:#7b8aa8; font-size:.72rem; margin-top:.15rem; }
+  .hint{ color:#fff; opacity:.85; font-size:.8rem; text-align:center; margin-top:1.4rem; max-width:420px; }
+</style>
+</head>
+<body>
+  <img class="page-logo" src="img/logo.png" alt="عصير تايم · Aseer Time" />
+  <h1>Table QR Code</h1>
+
+  <div class="panel">
+    <label for="url">Menu link (your live URL)</label>
+    <input id="url" type="url" placeholder="https://your-menu.netlify.app" />
+    <div class="row">
+      <button class="gen" id="gen">Generate</button>
+      <button class="dl" id="dl">Download PNG</button>
+    </div>
+  </div>
+
+  <!-- printable card -->
+  <div class="card" id="card">
+    <img class="card-logo" src="img/logo.png" alt="Aseer Time" />
+    <canvas id="qr" width="600" height="600"></canvas>
+    <div class="scan">SCAN FOR MENU
+      <small>امسح للقائمة · menü için tara</small>
+    </div>
+  </div>
+
+  <p class="hint">Tip: paste your live link, hit Generate, then Download PNG — print it or stick it on the tables. Re-generate anytime if your domain changes.</p>
+
+<script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+<script>
+  const urlInput = document.getElementById("url");
+  const canvas = document.getElementById("qr");
+  const ctx = canvas.getContext("2d");
+
+  // default to this site's root, where the menu (index.html) lives
+  const guess = location.origin + "/";
+  urlInput.value = guess;
+
+  const logo = new Image();
+  logo.src = "img/logo.png";
+  logo.onload = draw;        // redraw once the logo is available
+
+  function roundRect(c, x, y, w, h, r){
+    c.beginPath();
+    c.moveTo(x+r, y);
+    c.arcTo(x+w, y, x+w, y+h, r);
+    c.arcTo(x+w, y+h, x, y+h, r);
+    c.arcTo(x, y+h, x, y, r);
+    c.arcTo(x, y, x+w, y, r);
+    c.closePath();
+  }
+
+  function draw(){
+    const value = urlInput.value.trim() || guess;
+    // QR at high error-correction so the center logo doesn't break it
+    new QRious({ element: canvas, value, size: 600, level: "H",
+                 background: "#ffffff", foreground: "#0a6bd6" });
+    // bake the logo into the middle
+    if(logo.complete && logo.naturalWidth){
+      const s = canvas.width;
+      const box = s * 0.22;                 // logo ~22% of the QR
+      const pad = box * 0.14;
+      const x = (s - box) / 2, y = (s - box) / 2;
+      ctx.fillStyle = "#ffffff";
+      roundRect(ctx, x - pad, y - pad, box + pad*2, box + pad*2, 16);
+      ctx.fill();
+      ctx.drawImage(logo, x, y, box, box);
+    }
+  }
+  function download(){
+    const a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
+    a.download = "juicetime-menu-qr.png";
+    a.click();
+  }
+  document.getElementById("gen").addEventListener("click", draw);
+  document.getElementById("dl").addEventListener("click", download);
+  draw();
+</script>
+</body>
+</html>

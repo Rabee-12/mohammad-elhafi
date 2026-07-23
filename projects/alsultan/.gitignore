@@ -1,0 +1,12 @@
+# Dev-only source backups & scripts (not part of the website)
+_src_photos/
+
+# Internal project notes — keep out of the deployed/published site
+ASSETS-NEEDED.md
+RESEARCH-FINDINGS.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/

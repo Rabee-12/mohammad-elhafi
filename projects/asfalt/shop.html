@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — ASFALT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23101010'/><text y='72' x='50' text-anchor='middle' font-size='60' fill='%23c9f21b' font-family='sans-serif' font-weight='900'>A</text></svg>">
+</head>
+<body data-title="Shop">
+
+  <div class="ticker"><div class="ticker-inner" id="ticker"></div></div>
+
+  <header class="site-head">
+    <div class="wrap head-in">
+      <a class="logo" href="index.html">ASFALT<span class="star">★</span></a>
+      <nav class="nav-desk">
+        <a href="index.html" data-i18n="nav_home"></a>
+        <a href="shop.html" data-i18n="nav_shop"></a>
+        <a href="index.html#drop" data-i18n="nav_drop"></a>
+        <a href="index.html#about" data-i18n="nav_about"></a>
+      </nav>
+      <div class="head-tools">
+        <div class="lang-sw">
+          <button data-lang="en">EN</button>
+          <button data-lang="tr">TR</button>
+          <button data-lang="ar">ع</button>
+        </div>
+        <button class="bag-btn" onclick="openCart()">
+          <span data-i18n="cart_title"></span>
+          <span class="bag-count">0</span>
+        </button>
+        <button class="burger" aria-label="menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mnav" id="mnav">
+    <button class="m-close">✕</button>
+    <a href="index.html" data-i18n="nav_home"></a>
+    <a href="shop.html" data-i18n="nav_shop"></a>
+    <a href="index.html#drop" data-i18n="nav_drop"></a>
+    <a href="index.html#about" data-i18n="nav_about"></a>
+  </div>
+
+  <section class="shop-head">
+    <div class="wrap">
+      <h1 class="disp" data-i18n="shop_title"></h1>
+      <span class="mono" data-i18n="shop_sub"></span>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="shop-bar">
+      <div id="pills" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+      <select id="sortSel"></select>
+    </div>
+    <div class="res-count" id="resCount" style="padding-bottom:16px"></div>
+    <div class="p-grid" id="shopGrid"></div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-wordmark">ASFALT</div>
+      <div class="foot-base">
+        <span>© 2026 ASFALT</span>
+        <span data-i18n="footer_note"></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <h3 data-i18n="cart_title"></h3>
+      <button onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot" id="cartFoot">
+      <div class="cart-total-row"><span data-i18n="cart_total"></span><span id="cartTotal"></span></div>
+      <p class="cart-note" data-i18n="cart_note"></p>
+      <button class="btn cart-wa" onclick="checkoutWA()" data-i18n="cart_wa"></button>
+    </div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    let curCat = new URLSearchParams(location.search).get("cat") || "all";
+    if (curCat !== "all" && !CATS[curCat]) curCat = "all";
+    let curSort = "feat";
+
+    function renderShop() {
+      const { t, lang } = ASFALT;
+
+      const tk = t("ticker") + " " + t("ticker");
+      document.getElementById("ticker").innerHTML = `<span>${tk}</span>`;
+
+      // filter pills
+      const cats = ["all", ...Object.keys(CATS)];
+      document.getElementById("pills").innerHTML = cats.map(c =>
+        `<button class="f-pill ${c === curCat ? "on" : ""}" data-cat="${c}">
+           ${c === "all" ? t("f_all") : CATS[c][lang]}
+         </button>`).join("");
+      document.querySelectorAll(".f-pill").forEach(b =>
+        b.addEventListener("click", () => {
+          curCat = b.dataset.cat;
+          history.replaceState(null, "", curCat === "all" ? "shop.html" : `shop.html?cat=${curCat}`);
+          renderShop();
+        }));
+
+      // sort select
+      const sel = document.getElementById("sortSel");
+      sel.innerHTML = `
+        <option value="feat">${t("sort_feat")}</option>
+        <option value="low">${t("sort_low")}</option>
+        <option value="high">${t("sort_high")}</option>`;
+      sel.value = curSort;
+      sel.onchange = () => { curSort = sel.value; renderShop(); };
+
+      // products
+      let list = curCat === "all" ? [...PRODUCTS] : PRODUCTS.filter(p => p.cat === curCat);
+      if (curSort === "low") list.sort((a, b) => a.price - b.price);
+      if (curSort === "high") list.sort((a, b) => b.price - a.price);
+
+      document.getElementById("resCount").textContent = `${list.length} ${t("results")}`;
+      document.getElementById("shopGrid").innerHTML =
+        list.map((p, i) => productCard(p, (i % 4) + 1)).join("");
+
+      watchReveals();
+    }
+    document.addEventListener("asfalt:ready", renderShop);
+    document.addEventListener("asfalt:lang", renderShop);
+  </script>
+</body>
+</html>

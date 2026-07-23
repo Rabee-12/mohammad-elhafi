@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection — NOOR نور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%99%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="Collection">
+
+<header class="site-head scrolled">
+  <div class="wrap head-in">
+    <a class="logo" href="index.html"><span class="lat">NOOR</span><span class="arb">نور</span></a>
+    <nav class="nav">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="shop.html" class="active" data-i18n="nav_shop">Shop</a>
+      <a href="index.html#story" data-i18n="nav_story">Our Story</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="head-tools">
+      <div class="lang-sw">
+        <button data-lang="en">EN</button>
+        <button data-lang="tr">TR</button>
+        <button data-lang="ar">ع</button>
+      </div>
+      <button class="bag-btn" onclick="openCart()" aria-label="Bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="bag-count">0</span>
+      </button>
+      <button class="burger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="m-nav" id="mnav">
+  <button class="m-close">×</button>
+  <ul>
+    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+    <li><a href="index.html#story" data-i18n="nav_story">Our Story</a></li>
+    <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+</div>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker li li-1">NOOR نور</p>
+    <h1 class="page-title li li-2" data-i18n="shop_title">The Collection</h1>
+    <p class="sec-sub li li-3" data-i18n="shop_sub"></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="shop-bar li li-4">
+    <div class="filters" id="filters"></div>
+    <div class="shop-tools">
+      <span class="res-count" id="resCount"></span>
+      <select class="sort-sel" id="sortSel"></select>
+    </div>
+  </div>
+  <div class="prod-grid" id="shopGrid" style="padding-bottom:90px"></div>
+</div>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="index.html"><span class="lat">NOOR</span><span class="arb">نور</span></a>
+        <p class="foot-tag" data-i18n="footer_tag">Dressed in light.</p>
+      </div>
+      <div class="foot-col">
+        <b data-i18n="footer_shop">Shop</b>
+        <a href="shop.html?cat=open" data-cat-link="open"></a>
+        <a href="shop.html?cat=closed" data-cat-link="closed"></a>
+        <a href="shop.html?cat=embellished" data-cat-link="embellished"></a>
+        <a href="shop.html?cat=hijab" data-cat-link="hijab"></a>
+      </div>
+      <div class="foot-col">
+        <b data-i18n="footer_help">Contact</b>
+        <a href="https://wa.me/905000000000" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@noor-fashion.com">info@noor-fashion.com</a>
+        <a href="index.html#contact" data-i18n="contact_title">Visit the Atelier</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 NOOR نور</span>
+      <span data-i18n="footer_note"></span>
+      <span>Made by <a href="#">Klyro</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cartDrawer">
+  <div class="cart-head">
+    <h3 data-i18n="cart_title">Your Bag</h3>
+    <button onclick="closeCart()" aria-label="Close">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot" id="cartFoot">
+    <div class="cart-total-row"><b data-i18n="cart_total">Total</b><span class="amt" id="cartTotal">₺0</span></div>
+    <p class="cart-note" data-i18n="cart_note"></p>
+    <button class="wa-btn" onclick="checkoutWA()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.1-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.2 2.1-.5 3.6a12 12 0 0 0 4.5 4.7c1.7 1 2.6 1 3.5.8.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.2-.2-.2-.4-.3z"/></svg>
+      <span data-i18n="cart_wa">Order via WhatsApp</span>
+    </button>
+  </div>
+</aside>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  let curCat = new URLSearchParams(location.search).get("cat") || "all";
+  if (curCat !== "all" && !CATS[curCat]) curCat = "all";
+  let curSort = "feat";
+
+  function renderShop() {
+    const lang = NOOR.lang;
+    // filter pills
+    document.getElementById("filters").innerHTML =
+      [`<button class="f-pill ${curCat === "all" ? "on" : ""}" data-cat="all">${NOOR.t("f_all")}</button>`]
+        .concat(Object.keys(CATS).map(c =>
+          `<button class="f-pill ${curCat === c ? "on" : ""}" data-cat="${c}">${CATS[c][lang]}</button>`))
+        .join("");
+    document.querySelectorAll(".f-pill").forEach(b =>
+      b.addEventListener("click", () => {
+        curCat = b.dataset.cat;
+        history.replaceState(null, "", curCat === "all" ? "shop.html" : `shop.html?cat=${curCat}`);
+        renderShop();
+      }));
+    // sort select
+    const sel = document.getElementById("sortSel");
+    sel.innerHTML = `
+      <option value="feat">${NOOR.t("sort_feat")}</option>
+      <option value="low">${NOOR.t("sort_low")}</option>
+      <option value="high">${NOOR.t("sort_high")}</option>`;
+    sel.value = curSort;
+    sel.onchange = () => { curSort = sel.value; renderShop(); };
+    // grid
+    let list = curCat === "all" ? [...PRODUCTS] : PRODUCTS.filter(p => p.cat === curCat);
+    if (curSort === "low") list.sort((a, b) => a.price - b.price);
+    if (curSort === "high") list.sort((a, b) => b.price - a.price);
+    document.getElementById("resCount").textContent = `${list.length} ${NOOR.t("results")}`;
+    document.getElementById("shopGrid").innerHTML =
+      list.map((p, i) => productCard(p, i % 4)).join("");
+    // footer links
+    document.querySelectorAll("[data-cat-link]").forEach(a => {
+      a.textContent = CATS[a.dataset.catLink][lang];
+    });
+    watchReveals();
+  }
+  document.addEventListener("noor:ready", renderShop);
+  document.addEventListener("noor:lang", renderShop);
+</script>
+</body>
+</html>

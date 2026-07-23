@@ -1,0 +1,35 @@
+# Klyro menu — Hostinger (Apache) hardening + caching
+Options -Indexes
+
+# never serve the config (contains the password hash)
+<Files "config.php">
+  Require all denied
+</Files>
+
+# never serve dev docs / dotfiles (setup notes contain the default login, etc.)
+<FilesMatch "\.md$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# never serve backups or temp files (incl. rotating menu.json.bak1..3)
+<FilesMatch "\.(bak[0-9]*|tmp)$">
+  Require all denied
+</FilesMatch>
+
+# never cache the menu data, so edits show up instantly
+<Files "menu.json">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+  </IfModule>
+</Files>
+
+# cache photos for a week (fast repeat visits / weak wifi)
+<FilesMatch "\.(jpg|jpeg|png|webp|gif|svg)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=604800"
+  </IfModule>
+</FilesMatch>

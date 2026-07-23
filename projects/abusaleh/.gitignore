@@ -1,0 +1,26 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Build/dev artifacts — NOT part of the deployed site.
+# app.js is generated from menu_data.js + _logic.js; only the built files deploy.
+build_menu.py
+extract_nuxt.py
+assemble.py
+_logic.js
+menu.js
+menu_data.js
+_products.json
+_nuxt_*.html
+
+# legacy flat photo dump (superseded by img/<category>/)
+images/
