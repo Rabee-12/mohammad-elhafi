@@ -46,6 +46,10 @@ const PROJECTS = [
     en:{ name:"8ONE Burger", desc:"A burger restaurant menu with big appetite energy — fast, photographic, and built for hungry thumbs on mobile." },
     ar:{ name:"8ONE برجر", desc:"قائمة مطعم برجر بطاقة شهية عالية — سريعة، مصوّرة، ومبنية لتُتصفح بسهولة على الجوال." },
     tags:["Menu","Mobile-first"] },
+  { id:"sable", cat:"menus", img:"assets/work/sable.png",
+    en:{ name:"SABLÉ", desc:"A patisserie & café in Jumeirah — Swiss minimal design. Paper, ink and one caramel accent; typographic list, hairlines, zero emojis. The quiet opposite of a loud menu." },
+    ar:{ name:"سابل", desc:"باتيسري ومقهى في الجميرا — تصميم سويسري مينيمالي. ورق وحبر ولمسة كراميل واحدة؛ قائمة مطبعية بخطوط رفيعة وبلا أي رموز. النقيض الهادئ للقوائم الصاخبة." },
+    tags:["Menu","Swiss minimal","AED"] },
   { id:"cita", cat:"cars", img:"assets/work/cita.png",
     en:{ name:"ÇİTA Rent a Car", desc:"An Istanbul car-rental fleet of 16 cars — trilingual, WhatsApp booking in two taps, airport delivery, built for speed on mobile data." },
     ar:{ name:"تشيتا لتأجير السيارات", desc:"أسطول من ١٦ سيارة في إسطنبول — ثلاثي اللغات، حجز عبر واتساب بنقرتين، توصيل للمطار، وسرعة فائقة على بيانات الجوال." },
@@ -63,11 +67,48 @@ const ICONS = {
   ai: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.1 6.3 6.4 2.2-6.4 2.2L12 19.5l-2.1-6.3-6.4-2.2 6.4-2.2z"/><circle cx="19.5" cy="4.5" r="1.6"/></svg>`,
 };
 
+const SKILL_ICONS = {
+  Python: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 0-4 2-4 4v2h4v1H7c-2.5 0-4.5 1.5-4.5 4.5S4.5 16 7 16h1v-2c0-2 2-4 4-4h4c2 0 3-1 3-3V6c0-2-1.5-4-4-4h-5z"/><circle cx="9.5" cy="5.5" r="1" fill="currentColor"/><path d="M12 22c4 0 4-2 4-4v-2h-4v-1h5c2.5 0 4.5-1.5 4.5-4.5S19.5 8 17 8h-1v2c0 2-2 4-4 4h-4c-2 0-3 1-3 3v3c0 2 1.5 4 4 4h5z"/><circle cx="14.5" cy="18.5" r="1" fill="currentColor"/></svg>`,
+  Java: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6H8v12z"/><path d="M6 6h12"/><path d="M10 2c1 0 2 .5 2 2v2H8c-1 0-2-.5-2-2"/><path d="M9 11h2M9 14h2M13 11h2M13 14h2"/></svg>`,
+  TypeScript: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 15V9l3 3 3-3v6"/><path d="M16 12h-2c0 1.5-1 2.5-2 2.5S10 13.5 10 12"/></svg>`,
+  SQL: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>`,
+  "HTML / CSS / JS": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-4 6 4 6"/><path d="M16 6l4 6-4 6"/><path d="M14 4l-4 16"/></svg>`,
+  RTL: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 8l4 4-4 4"/><path d="M16 8l-4 4 4 4"/></svg>`,
+  Git: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M12 8.5v7M14.5 12H17"/></svg>`,
+  "Network Security": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="11" width="10" height="8" rx="2"/><path d="M9 11V8a3 3 0 0 1 6 0v3"/><circle cx="12" cy="15" r="1" fill="currentColor"/></svg>`,
+  Linux: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8l3 3M8 11h3"/><path d="M14 14h3M17 11v6"/></svg>`,
+  "Secure builds": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>`,
+  "AI Tooling": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 6V3M15 6V3M9 21v-3M15 21v-3M6 9H3M6 15H3M21 9h-3M21 15h-3"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>`,
+  "Content creation": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-12 12H5v-4L17 3z"/><path d="M15 5l4 4"/></svg>`,
+  "Prompt craft": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h0M12 10h0M16 10h0"/></svg>`,
+};
+
 const SKILLS = [
-  { icon: "code",     label: { en: "Code",     ar: "برمجة" },        items: ["Python", "Java", "TypeScript", "SQL"] },
-  { icon: "web",      label: { en: "Web",      ar: "ويب" },          items: ["HTML / CSS / JS", { en: "RTL & multilingual", ar: "مواقع متعددة اللغات RTL" }, "Git"] },
-  { icon: "security", label: { en: "Security", ar: "أمن سيبراني" },  items: [{ en: "Network Security", ar: "أمن الشبكات" }, "Linux", { en: "Secure builds", ar: "بناء آمن" }] },
-  { icon: "ai",       label: { en: "AI",       ar: "ذكاء اصطناعي" }, items: [{ en: "AI Tooling", ar: "أدوات الذكاء الاصطناعي" }, { en: "Content creation", ar: "صناعة المحتوى" }, { en: "Prompt craft", ar: "هندسة الأوامر" }] },
+  { icon: "code",     label: { en: "Code",     ar: "برمجة" },
+    items: [
+      { name: "Python",          icon: "Python" },
+      { name: "Java",            icon: "Java" },
+      { name: "TypeScript",      icon: "TypeScript" },
+      { name: "SQL",             icon: "SQL" },
+    ] },
+  { icon: "web",      label: { en: "Web",      ar: "ويب" },
+    items: [
+      { name: "HTML / CSS / JS", icon: "HTML / CSS / JS" },
+      { name: { en: "RTL & multilingual", ar: "مواقع متعددة اللغات RTL" }, icon: "RTL" },
+      { name: "Git",             icon: "Git" },
+    ] },
+  { icon: "security", label: { en: "Security", ar: "أمن سيبراني" },
+    items: [
+      { name: { en: "Network Security", ar: "أمن الشبكات" }, icon: "Network Security" },
+      { name: "Linux",           icon: "Linux" },
+      { name: { en: "Secure builds", ar: "بناء آمن" },       icon: "Secure builds" },
+    ] },
+  { icon: "ai",       label: { en: "AI",       ar: "ذكاء اصطناعي" },
+    items: [
+      { name: { en: "AI Tooling", ar: "أدوات الذكاء الاصطناعي" },   icon: "AI Tooling" },
+      { name: { en: "Content creation", ar: "صناعة المحتوى" },       icon: "Content creation" },
+      { name: { en: "Prompt craft", ar: "هندسة الأوامر" },            icon: "Prompt craft" },
+    ] },
 ];
 
 /* ============================ i18n ============================ */
@@ -177,9 +218,11 @@ function renderToolbox() {
   SKILLS.forEach(g => {
     const div = document.createElement("div");
     div.className = "tgroup";
-    const items = g.items
-      .map(it => `<li>${typeof it === "string" ? it : it[lang]}</li>`)
-      .join("");
+    const items = g.items.map(it => {
+      const label = typeof it.name === "string" ? it.name : it.name[lang];
+      const iconSvg = SKILL_ICONS[it.icon] || "";
+      return `<li><span class="skill-icon">${iconSvg}</span>${label}</li>`;
+    }).join("");
     div.innerHTML = `<h4 class="mono"><span class="ticon">${ICONS[g.icon]}</span>${g.label[lang]}</h4><ul>${items}</ul>`;
     wrap.appendChild(div);
   });
