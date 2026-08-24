@@ -11,6 +11,7 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+section[id],footer[id]{scroll-margin-top:80px}
 body{
   background:var(--paper);color:var(--ink);
   font-family:'Archivo','IBM Plex Sans Arabic',sans-serif;font-weight:400;

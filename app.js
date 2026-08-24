@@ -328,7 +328,7 @@ function renderWork() {
       // cover story
       card.className = "wcard feature pop";
       card.innerHTML =
-        `<div class="im"><img src="${p.img}" alt="${p[lang].name}" loading="lazy"></div>` +
+        `<div class="im"><img src="${p.img}" alt="${p[lang].name}" loading="lazy" decoding="async"></div>` +
         `<div class="f-text">` +
           `<p class="mono f-top"><span class="num">${num}</span><span class="cat">${catLabel}</span></p>` +
           `<h3 class="display">${p[lang].name}</h3>` +
@@ -339,7 +339,7 @@ function renderWork() {
     } else {
       card.className = "wcard pop";
       card.innerHTML =
-        `<div class="im"><img src="${p.img}" alt="${p[lang].name}" loading="lazy"></div>` +
+        `<div class="im"><img src="${p.img}" alt="${p[lang].name}" loading="lazy" decoding="async"></div>` +
         `<div class="meta">` +
           `<span class="num mono">${num}</span>` +
           `<h3 class="display">${p[lang].name}</h3>` +
@@ -434,14 +434,18 @@ document.querySelectorAll("#langToggle span[data-lang]").forEach(s =>
     }));
 
 (function initWa() {
+  const email = "mohamadhafee11" + "@" + "gmail.com";
   const href = WHATSAPP_NUMBER
     ? "https://wa.me/" + WHATSAPP_NUMBER.replace(/\D/g, "") +
       "?text=" + encodeURIComponent("Hi Mohammad! I saw your portfolio.")
-    : "mailto:mohamadhafee11@gmail.com"; // fallback until number is set
+    : "mailto:" + email;
   const wa1 = document.getElementById("waLink");
   const wa2 = document.getElementById("waLink2");
   if (WHATSAPP_NUMBER) { wa1.target = wa2.target = "_blank"; wa1.rel = wa2.rel = "noopener"; }
   wa1.href = wa2.href = href;
+  const mail = document.getElementById("mailLink");
+  mail.href = "mailto:" + email;
+  mail.textContent = email;
 })();
 
 /* ============================ reveal on scroll ============================ */
