@@ -5,57 +5,68 @@ const WHATSAPP_NUMBER = "971502634260";
 /* ============================ data ============================ */
 
 const CATEGORIES = [
-  { id: "menus",  en: "Menus & Restaurants", ar: "قوائم ومطاعم" },
-  { id: "shops",  en: "E-Commerce",          ar: "متاجر إلكترونية" },
-  { id: "fitness",en: "Fitness",             ar: "لياقة" },
-  { id: "cars",   en: "Car Rental",          ar: "تأجير سيارات" },
-  { id: "agency", en: "Agency",              ar: "وكالة" },
+  { id: "menus",  en: "Menus & Restaurants", ar: "قوائم ومطاعم", tr: "Menüler & Restoranlar" },
+  { id: "shops",  en: "E-Commerce",          ar: "متاجر إلكترونية", tr: "E-Ticaret" },
+  { id: "fitness",en: "Fitness",             ar: "لياقة", tr: "Fitness" },
+  { id: "cars",   en: "Car Rental",          ar: "تأجير سيارات", tr: "Araç Kiralama" },
+  { id: "agency", en: "Agency",              ar: "وكالة", tr: "Ajans" },
 ];
 
 const PROJECTS = [
   { id:"klyro", cat:"agency", img:"assets/work/klyro.png",
     en:{ name:"Klyro", desc:"My studio. Digital menus and websites for cafés and restaurants across Turkey and the Gulf — multilingual, mobile-first, always up to date. Launching soon." },
     ar:{ name:"كليرو", desc:"استوديوهي الخاص. قوائم رقمية ومواقع للمقاهي والمطاعم في تركيا والخليج — متعددة اللغات، وقريباً بحلّته الكاملة." },
+    tr:{ name:"Klyro", desc:"Benim stüdyom. Türkiye ve Körfez'deki kafeler ve restoranlar için dijital menüler ve web siteleri — çok dilli, mobil öncelikli, her zaman güncel. Yakında yayında." },
     tags:["Founder","Agency","Launching soon"] },
   { id:"kickfit", cat:"fitness", img:"assets/work/kickfit.png",
     en:{ name:"Kickfit", desc:"A premium gym in Başakşehir led by a European kickboxing champion — dark and gold luxury, trilingual with full RTL, built to sell memberships." },
     ar:{ name:"كيك فيت", desc:"نادٍ رياضي فاخر في باشاك شهير يقوده بطل أوروبا في الكيك بوكسينغ — فخامة بالأسود والذهبي، ثلاثي اللغات بدعم كامل للعربية." },
+    tr:{ name:"Kickfit", desc:"Başakşehir'de Avrupa kickboks şampiyonunun liderliğindeki premium bir salon — koyu ve altın lüks, tam RTL desteğiyle üç dilli, üyelik satmak için tasarlandı." },
     tags:["Fitness","TR · AR · EN","Luxury"] },
   { id:"noor", cat:"shops", img:"assets/work/noor.png",
     en:{ name:"NOOR", desc:"A luxury modest-fashion house in dark and gold — full e-commerce with cart and WhatsApp checkout, Arabic calligraphy details, and couture-level restraint." },
     ar:{ name:"نور", desc:"دار أزياء محتشمة فاخرة بالأسود والذهبي — متجر كامل بسلة شراء وإتمام الطلب عبر واتساب، مع لمسات خط عربي وأناقة هادئة." },
+    tr:{ name:"NOOR", desc:"Koyu ve altın tonda lüks bir mütevazı moda evi — sepet ve WhatsApp ödemeli tam e-ticaret, Arap kaligrafisi detayları ve couture seviyesinde sadelik." },
     tags:["E-commerce","Cart + WhatsApp","EN · TR · AR"] },
   { id:"asfalt", cat:"shops", img:"assets/work/asfalt.png",
     en:{ name:"ASFALT", desc:"Brutalist Istanbul streetwear — concrete grey and acid green, hard edges, limited drops. The deliberate opposite of NOOR, from the same keyboard." },
     ar:{ name:"أسفلت", desc:"ستريت وير إسطنبولي بروح خرسانية — رمادي إسمنتي وأخضر حمضي وحواف حادة. النقيض المتعمد لِنور، من نفس لوحة المفاتيح." },
+    tr:{ name:"ASFALT", desc:"Brütalist İstanbul sokak modası — beton grisi ve asit yeşili, keskin hatlar, sınırlı koleksiyonlar. Aynı klavyeden NOOR'un kasıtlı zıttı." },
     tags:["E-commerce","Brutalist","Limited drops"] },
   { id:"bhaleeb", cat:"menus", img:"assets/work/bhaleeb.png",
     en:{ name:"Bhaleeb", desc:"A trilingual QR menu for a milk-dessert café — soft blue and cream branding, product photography front and center, built to make you hungry before you sit down." },
     ar:{ name:"بحليب", desc:"قائمة QR ثلاثية اللغات لمقهى حلويات الحليب — هوية بألوان الأزرق والكريمي، مع تصوير المنتجات في الواجهة، صُممت لتفتح شهيتك قبل أن تجلس." },
+    tr:{ name:"Bhaleeb", desc:"Sütlü tatlı kafesi için üç dilli QR menü — yumuşak mavi ve krem marka kimliği, ürün fotoğrafları ön planda; oturmadan iştahınızı açacak şekilde tasarlandı." },
     tags:["Menu","EN · TR · AR","Mobile-first"] },
   { id:"abusaleh", cat:"menus", img:"assets/work/abusaleh.png",
     en:{ name:"Abu Saleh", desc:"A juice café in Istanbul with a dark teal and gold identity — heavy motion graphics, Arabic-first right-to-left layout, designed to feel alive on every scroll." },
     ar:{ name:"أبو صالح", desc:"مقهى عصائر في إسطنبول بهوية تركواز داكن وذهبي — رسوم متحركة غنية، وتصميم عربي من اليمين إلى اليسار، يبعث الحياة في كل تمريرة." },
+    tr:{ name:"Abu Saleh", desc:"İstanbul'da koyu turkuaz ve altın kimlikli bir meyve suyu kafesi — yoğun motion graphics, Arapça öncelikli sağdan sola düzen, her kaydırmada canlı hisseden tasarım." },
     tags:["Menu","RTL Arabic","Motion"] },
   { id:"juicetime", cat:"menus", img:"assets/work/juicetime.png",
     en:{ name:"Juice Time", desc:"94 items, one bold red-and-white menu. Arabic by default, scraped, structured and rebuilt from scratch for a juice & sweets cafe in Kayaşehir, Istanbul." },
     ar:{ name:"وقت العصير", desc:"٩٤ صنفاً في قائمة جريئة بالأحمر والأبيض. عربية افتراضياً، أُعيد بناؤها من الصفر لمقهى عصائر وحلويات في كاياشهير، إسطنبول." },
+    tr:{ name:"Juice Time", desc:"94 ürün, tek bir iddialı kırmızı-beyaz menü. Varsayılan olarak Arapça; Kayaşehir, İstanbul'daki bir meyve suyu ve tatlı kafesi için sıfırdan yeniden inşa edildi." },
     tags:["Menu","94 items","AR default"] },
   { id:"burger", cat:"menus", img:"assets/work/burger.png",
     en:{ name:"8ONE Burger", desc:"A burger restaurant menu with big appetite energy — fast, photographic, and built for hungry thumbs on mobile." },
     ar:{ name:"8ONE برجر", desc:"قائمة مطعم برجر بطاقة شهية عالية — سريعة، مصوّرة، ومبنية لتُتصفح بسهولة على الجوال." },
+    tr:{ name:"8ONE Burger", desc:"Büyük iştah enerjisi taşıyan bir burger restoranı menüsü — hızlı, fotoğraf ağırlıklı ve mobilde aç başparmaklar için tasarlandı." },
     tags:["Menu","Mobile-first"] },
   { id:"sable", cat:"menus", img:"assets/work/sable.png",
     en:{ name:"SABLÉ", desc:"A patisserie & café in Jumeirah — Swiss minimal design. Paper, ink and one caramel accent; typographic list, hairlines, zero emojis. The quiet opposite of a loud menu." },
     ar:{ name:"سابل", desc:"باتيسري ومقهى في الجميرا — تصميم سويسري مينيمالي. ورق وحبر ولمسة كراميل واحدة؛ قائمة مطبعية بخطوط رفيعة وبلا أي رموز. النقيض الهادئ للقوائم الصاخبة." },
+    tr:{ name:"SABLÉ", desc:"Jumeirah'da bir pastane ve kafe — İsviçre minimalizmi. Kağıt, mürekkep ve tek bir karamel vurgusu; tipografik liste, ince çizgiler, sıfır emoji. Gürültülü menülerin sessiz zıttı." },
     tags:["Menu","Swiss minimal","AED"] },
   { id:"cita", cat:"cars", img:"assets/work/cita.png",
     en:{ name:"ÇİTA Rent a Car", desc:"An Istanbul car-rental fleet of 16 cars — trilingual, WhatsApp booking in two taps, airport delivery, built for speed on mobile data." },
     ar:{ name:"تشيتا لتأجير السيارات", desc:"أسطول من ١٦ سيارة في إسطنبول — ثلاثي اللغات، حجز عبر واتساب بنقرتين، توصيل للمطار، وسرعة فائقة على بيانات الجوال." },
+    tr:{ name:"ÇİTA Rent a Car", desc:"İstanbul'da 16 araçlık kiralama filosu — üç dilli, iki dokunuşta WhatsApp rezervasyonu, havaalanı teslimatı ve mobil veride hız için tasarlandı." },
     tags:["Car rental","16 cars","WhatsApp booking"] },
   { id:"alsultan", cat:"cars", img:"assets/work/alsultan.png",
     en:{ name:"Al Sultan", desc:"A Başakşehir rental brand in red and black, Arabic-first — currently in progress, launching soon." },
     ar:{ name:"السلطان", desc:"علامة تأجير سيارات في باشاك شهير بالأحمر والأسود، عربية أولاً — قيد الإنجاز، قريباً." },
+    tr:{ name:"Al Sultan", desc:"Başakşehir'de kırmızı ve siyah renklerde, Arapça öncelikli bir kiralama markası — şu anda geliştiriliyor, yakında lansmanda." },
     tags:["Car rental","AR-first","In progress"] },
 ];
 
@@ -83,30 +94,30 @@ const SKILL_ICONS = {
 };
 
 const SKILLS = [
-  { icon: "code",     label: { en: "Code",     ar: "برمجة" },
+  { icon: "code",     label: { en: "Code",     ar: "برمجة", tr: "Kodlama" },
     items: [
       { name: "Python",          icon: "Python" },
       { name: "Java",            icon: "Java" },
       { name: "TypeScript",      icon: "TypeScript" },
       { name: "SQL",             icon: "SQL" },
     ] },
-  { icon: "web",      label: { en: "Web",      ar: "ويب" },
+  { icon: "web",      label: { en: "Web",      ar: "ويب", tr: "Web" },
     items: [
       { name: "HTML / CSS / JS", icon: "HTML / CSS / JS" },
-      { name: { en: "RTL & multilingual", ar: "مواقع متعددة اللغات RTL" }, icon: "RTL" },
+      { name: { en: "RTL & multilingual", ar: "مواقع متعددة اللغات RTL", tr: "RTL ve çok dillilik" }, icon: "RTL" },
       { name: "Git",             icon: "Git" },
     ] },
-  { icon: "security", label: { en: "Security", ar: "أمن سيبراني" },
+  { icon: "security", label: { en: "Security", ar: "أمن سيبراني", tr: "Güvenlik" },
     items: [
-      { name: { en: "Network Security", ar: "أمن الشبكات" }, icon: "Network Security" },
+      { name: { en: "Network Security", ar: "أمن الشبكات", tr: "Ağ Güvenliği" }, icon: "Network Security" },
       { name: "Linux",           icon: "Linux" },
-      { name: { en: "Secure builds", ar: "بناء آمن" },       icon: "Secure builds" },
+      { name: { en: "Secure builds", ar: "بناء آمن", tr: "Güvenli derlemeler" }, icon: "Secure builds" },
     ] },
-  { icon: "ai",       label: { en: "AI",       ar: "ذكاء اصطناعي" },
+  { icon: "ai",       label: { en: "AI",       ar: "ذكاء اصطناعي", tr: "YZ" },
     items: [
-      { name: { en: "AI Tooling", ar: "أدوات الذكاء الاصطناعي" },   icon: "AI Tooling" },
-      { name: { en: "Content creation", ar: "صناعة المحتوى" },       icon: "Content creation" },
-      { name: { en: "Prompt craft", ar: "هندسة الأوامر" },            icon: "Prompt craft" },
+      { name: { en: "AI Tooling", ar: "أدوات الذكاء الاصطناعي", tr: "YZ araçları" },        icon: "AI Tooling" },
+      { name: { en: "Content creation", ar: "صناعة المحتوى", tr: "İçerik üretimi" },       icon: "Content creation" },
+      { name: { en: "Prompt craft", ar: "هندسة الأوامر", tr: "Prompt sanatı" },            icon: "Prompt craft" },
     ] },
 ];
 
@@ -185,10 +196,60 @@ const I18N = {
     "close":"إغلاق",
     "ticker":["مواقع","متاجر إلكترونية","قوائم QR","أمن سيبراني","محتوى ذكاء اصطناعي","عربي + إنجليزي","من دبي إلى العالم"],
   },
+  tr: {
+    "tb.loc":"Dubai, BAE — 25.2°N 55.3°E",
+    "nav.work":"İşler","nav.about":"Hakkımda","nav.services":"Hizmetler","nav.contact":"İletişim",
+    "hero.kicker":"Projelere açığım — dünyanın her yerinden",
+    "hero.l1":"Siber güvenlik,","hero.l2":"tasarım","hero.amp":" ve ","hero.l3":"YZ.",
+    "hero.sub":"Ben Mohammad Elhafi — Klyro'nun kurucusu, Dubai'de siber güvenlik öğrencisi ve işletmelerin gerçekten müşteri kazandıran bir web sitesi istediğinde aradığı kişi.",
+    "cta.start":"Proje başlat ↗","cta.work":"İşleri gör ↓",
+    "hero.stamp1":"Kurucu","hero.stamp2":"Dubai",
+    "hero.cap":"Mohammad Elhafi — siber güvenlik analisti · web geliştirici · YZ içerik üreticisi",
+    "stat.1":"Teslim edilen proje","stat.2":"Dil — EN AR TR","stat.3":"Ülke","stat.4":"Kurulan stüdyo — Klyro",
+    "work.title1":"Seçilmiş","work.title2":"işler",
+    "work.note":"+ siber güvenlik ve YZ projeleri yakında rafta.",
+    "work.open":"Projeyi gör",
+    "filter.all":"Tümü",
+    "about.title1":"Ben","about.title2":"kimim?","about.cap":"İş dışında — nadiren.",
+    "about.cap2":"Telefonda — muhtemelen projeniz hakkında.",
+    "about.pull":"«İnternetin aynı anda <em>daha güvenli</em> ve <em>daha güzel</em> olabileceğine inanıyorum.»",
+    "about.p1":"Dubai'deki Wollongong Üniversitesi'nde siber güvenlik öğrencisiyim ve Klyro'nun kurucusuyum — Türkiye ve Körfez genelinde kafelere, restoranlara ve markalara iki dilli web siteleri yapan bir stüdyo.",
+    "about.p2":"Yayınladığım her site hızlı ve çok dilli — Arapça, İngilizce, Türkçe — ve sadece güzel durmak için değil, satmak için tasarlandı. Bir yandan da yapay zekâ destekli içerik üretiyor, geleceği şekillendiren araçların hikâyelerini anlatıyorum.",
+    "about.skills":"Araçlar",
+    "quote.1":"Menü sitesi ilk ay kendini ödedi — böyle görünen bir yerde müşteriler daha çok sipariş veriyor.",
+    "quote.1c":"— Kafe sahibi, İstanbul",
+    "quote.2":"Hızlı, iki dilli, tam istediğimiz gibi — ve bizim düşünmediğimiz detayları o düşündü.",
+    "quote.2c":"— İşletme sahibi, Dubai",
+    "svc.title1":"Ne","svc.title2":"yaparım?",
+    "svc.1":"Müşteri kazandıran web siteleri","svc.1d":"Özel tasarım, elle kodlanmış siteler — şablon yok. Hızlı yüklenir ve ziyaretçileri müşteriye dönüştürür.",
+    "svc.2":"Menüler ve e-ticaret","svc.2d":"Kafeler ve restoranlar için QR menü siteleri; sepet ve WhatsApp ödemeli online mağazalar.",
+    "svc.3":"Arapça + İngilizce, doğru yapılmış","svc.3d":"Yansıtma sonrası değil, gerçek sağdan sola düzenler. İhtiyacınızda Türkçe de.",
+    "svc.4":"YZ içeriği ve marka varlığı","svc.4d":"Gerçekten görülen sosyal medya için yapay zekâ destekli içerik — metin, görsel, strateji.",
+    "svc.5":"Güvenlik odaklı yapım","svc.5d":"Her projede bir siber güvenlik analistininki gözü — temiz kod, güvenli formlar, sızdırılmış köşe yok.",
+    "c.kicker":"04 — aklınızda bir proje mi var?",
+    "c.title1":"Birlikte","c.title2":"üretelim.",
+    "c.wa":"WhatsApp ↗","c.loc":"Dubai, Birleşik Arap Emirlikleri","c.rights":"© 2026 Mohammad Elhafi",
+    "close":"Kapat",
+    "ticker":["Web Siteleri","E-Ticaret","QR Menüler","Siber Güvenlik","YZ İçeriği","Arapça + İngilizce","Dubai → dünya"],
+  },
 };
 
 let lang = "en";
 let activeFilter = "all";
+const LANG_KEY = "elhafi-lang";
+
+(function initLang() {
+  let saved = null;
+  try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+  if (saved === "en" || saved === "ar" || saved === "tr") { lang = saved; return; }
+  const nav = (navigator.language || "").toLowerCase();
+  if (nav.startsWith("ar")) lang = "ar";
+  else if (nav.startsWith("tr")) lang = "tr";
+})();
+
+function saveLang() {
+  try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+}
 
 function applyLang() {
   const dict = I18N[lang];
@@ -218,7 +279,7 @@ function renderToolbox() {
     const div = document.createElement("div");
     div.className = "tgroup";
     const items = g.items.map(it => {
-      const label = typeof it.name === "string" ? it.name : it.name[lang];
+      const label = typeof it.name === "string" ? it.name : (it.name[lang] || it.name.en);
       const iconSvg = SKILL_ICONS[it.icon] || "";
       return `<li><span class="skill-icon">${iconSvg}</span>${label}</li>`;
     }).join("");
@@ -250,7 +311,7 @@ function renderFilters() {
     wrap.appendChild(b);
   };
   mk("all", I18N[lang]["filter.all"]);
-  CATEGORIES.forEach(c => mk(c.id, c[lang]));
+  CATEGORIES.forEach(c => mk(c.id, c[lang] || c.en));
 }
 
 function renderWork() {
@@ -328,10 +389,14 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal()
 
 /* ============================ toggles & links ============================ */
 
-document.getElementById("langToggle").addEventListener("click", () => {
-  lang = lang === "en" ? "ar" : "en";
-  applyLang();
-});
+document.querySelectorAll("#langToggle span[data-lang]").forEach(s =>
+    s.addEventListener("click", e => {
+      e.stopPropagation();
+      if (s.dataset.lang === lang) return;
+      lang = s.dataset.lang;
+      applyLang();
+      saveLang();
+    }));
 
 (function initWa() {
   const href = WHATSAPP_NUMBER

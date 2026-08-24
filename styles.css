@@ -37,6 +37,8 @@ em{font-style:italic}
 .lang-btn{background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;
   color:var(--dim);display:flex;gap:7px;align-items:center;transition:border-color .3s}
 .lang-btn:hover{border-color:var(--ink)}
+.lang-btn span[data-lang]{cursor:pointer;transition:color .2s}
+.lang-btn span[data-lang]:hover{color:var(--ink)}
 .lang-btn .on{color:var(--ink);font-weight:700}
 .lang-btn .sep{opacity:.4}
 
