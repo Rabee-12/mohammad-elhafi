@@ -27,6 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600;700&family=Fragment+Mono&family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.pop{animation:none!important}</style></noscript>
 </head>
 <body>
 
@@ -172,7 +173,7 @@
 </footer>
 
 <!-- ===================== project modal ===================== -->
-<div class="modal" id="modal" aria-hidden="true">
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
   <div class="modal-card">
     <button class="modal-close mono" id="modalClose">✕ <span data-i18n="close">Close</span></button>
     <div class="modal-grid">
@@ -182,7 +183,13 @@
         <h3 class="display" id="modalTitle"></h3>
         <p id="modalDesc"></p>
         <ul class="tags mono" id="modalTags"></ul>
+        <a class="btn btn-ink modal-link mono" id="modalLink" href="#" target="_blank" rel="noopener" hidden>Visit site ↗</a>
       </div>
+    </div>
+    <div class="m-nav">
+      <button class="m-arrow" id="modalPrev" aria-label="Previous project" type="button">←</button>
+      <span class="mono m-count" id="modalCount" aria-live="polite"></span>
+      <button class="m-arrow" id="modalNext" aria-label="Next project" type="button">→</button>
     </div>
   </div>
 </div>

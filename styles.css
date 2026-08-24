@@ -228,10 +228,24 @@ html[lang="ar"] .c-big{line-height:1.4}
 .modal-text>p{color:var(--dim)}
 .tags{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .tags li{border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--dim)}
+.modal-link{margin-top:28px}
+.m-nav{display:flex;align-items:center;gap:16px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.m-arrow{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--dim);
+  font-size:18px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:.3s}
+.m-arrow:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.m-count{color:var(--dim)}
 
 /* ---------------- reveal ---------------- */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticker-track,.dot{animation:none!important}
+  .reveal{opacity:1;transform:none;transition:none}
+  .pop{animation:none}
+  .wcard:hover img,.hero-photo:hover .arch img,.about-photo:hover .candid{transform:none}
+}
 
 /* ---------------- responsive ---------------- */
 @media(max-width:980px){

@@ -152,6 +152,7 @@ const I18N = {
     "c.title1":"Let's make","c.title2":"something.",
     "c.wa":"WhatsApp ↗","c.loc":"Dubai, United Arab Emirates","c.rights":"© 2026 Mohammad Elhafi",
     "close":"Close",
+    "modal.visit":"Visit site ↗",
     "ticker":["Websites","E-Commerce","QR Menus","Cybersecurity","AI Content","Arabic + English","Dubai → the world"],
   },
   ar: {
@@ -188,6 +189,7 @@ const I18N = {
     "c.title1":"لنصنع","c.title2":"شيئاً معاً.",
     "c.wa":"واتساب ↗","c.loc":"دبي، الإمارات العربية المتحدة","c.rights":"© 2026 محمد الحافي",
     "close":"إغلاق",
+    "modal.visit":"زيارة الموقع ↗",
     "ticker":["مواقع","متاجر إلكترونية","قوائم QR","أمن سيبراني","محتوى ذكاء اصطناعي","عربي + إنجليزي","من دبي إلى العالم"],
   },
   tr: {
@@ -224,6 +226,7 @@ const I18N = {
     "c.title1":"Birlikte","c.title2":"üretelim.",
     "c.wa":"WhatsApp ↗","c.loc":"Dubai, Birleşik Arap Emirlikleri","c.rights":"© 2026 Mohammad Elhafi",
     "close":"Kapat",
+    "modal.visit":"Siteyi ziyaret et ↗",
     "ticker":["Web Siteleri","E-Ticaret","QR Menüler","Siber Güvenlik","YZ İçeriği","Arapça + İngilizce","Dubai → dünya"],
   },
 };
@@ -299,7 +302,9 @@ function renderFilters() {
   wrap.innerHTML = "";
   const mk = (id, label) => {
     const b = document.createElement("button");
+    b.type = "button";
     b.textContent = label;
+    b.setAttribute("aria-pressed", String(activeFilter === id));
     b.classList.toggle("active", activeFilter === id);
     b.addEventListener("click", () => { activeFilter = id; renderFilters(); renderWork(); });
     wrap.appendChild(b);
@@ -368,6 +373,7 @@ function fillModal(id) {
   const tags = document.getElementById("modalTags");
   tags.innerHTML = "";
   p.tags.forEach(t => { const li = document.createElement("li"); li.textContent = t; tags.appendChild(li); });
+  modalLink.textContent = I18N[lang]["modal.visit"];
   if (p.url) { modalLink.href = p.url; modalLink.hidden = false; }
   else { modalLink.hidden = true; }
   const i = PROJECTS.indexOf(p);
