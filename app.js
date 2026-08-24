@@ -9,15 +9,9 @@ const CATEGORIES = [
   { id: "shops",  en: "E-Commerce",          ar: "متاجر إلكترونية", tr: "E-Ticaret" },
   { id: "fitness",en: "Fitness",             ar: "لياقة", tr: "Fitness" },
   { id: "cars",   en: "Car Rental",          ar: "تأجير سيارات", tr: "Araç Kiralama" },
-  { id: "agency", en: "Agency",              ar: "وكالة", tr: "Ajans" },
 ];
 
 const PROJECTS = [
-  { id:"klyro", cat:"agency", img:"assets/work/klyro.png",
-    en:{ name:"Klyro", desc:"My studio. Digital menus and websites for cafés and restaurants across Turkey and the Gulf — multilingual, mobile-first, always up to date. Launching soon." },
-    ar:{ name:"كليرو", desc:"استوديوهي الخاص. قوائم رقمية ومواقع للمقاهي والمطاعم في تركيا والخليج — متعددة اللغات، وقريباً بحلّته الكاملة." },
-    tr:{ name:"Klyro", desc:"Benim stüdyom. Türkiye ve Körfez'deki kafeler ve restoranlar için dijital menüler ve web siteleri — çok dilli, mobil öncelikli, her zaman güncel. Yakında yayında." },
-    tags:["Founder","Agency","Launching soon"] },
   { id:"kickfit", cat:"fitness", img:"assets/work/kickfit.png",
     en:{ name:"Kickfit", desc:"A premium gym in Başakşehir led by a European kickboxing champion — dark and gold luxury, trilingual with full RTL, built to sell memberships." },
     ar:{ name:"كيك فيت", desc:"نادٍ رياضي فاخر في باشاك شهير يقوده بطل أوروبا في الكيك بوكسينغ — فخامة بالأسود والذهبي، ثلاثي اللغات بدعم كامل للعربية." },
@@ -320,6 +314,7 @@ function renderWork() {
   const list = PROJECTS.filter(p => activeFilter === "all" || p.cat === activeFilter);
   list.forEach((p, i) => {
     const cat = CATEGORIES.find(c => c.id === p.cat);
+    const catLabel = cat[lang] || cat.en;
     const num = String(i + 1).padStart(2, "0");
     const card = document.createElement("button");
     card.style.animationDelay = (i * 70) + "ms";
@@ -330,7 +325,7 @@ function renderWork() {
       card.innerHTML =
         `<div class="im"><img src="${p.img}" alt="${p[lang].name}" loading="lazy"></div>` +
         `<div class="f-text">` +
-          `<p class="mono f-top"><span class="num">${num}</span><span class="cat">${cat[lang]}</span></p>` +
+          `<p class="mono f-top"><span class="num">${num}</span><span class="cat">${catLabel}</span></p>` +
           `<h3 class="display">${p[lang].name}</h3>` +
           `<p class="f-desc">${p[lang].desc}</p>` +
           `<ul class="tags mono">${p.tags.map(t => `<li>${t}</li>`).join("")}</ul>` +
@@ -343,10 +338,11 @@ function renderWork() {
         `<div class="meta">` +
           `<span class="num mono">${num}</span>` +
           `<h3 class="display">${p[lang].name}</h3>` +
-          `<span class="cat mono">${cat[lang]}</span>` +
+          `<span class="cat mono">${catLabel}</span>` +
         `</div>` +
         `<p class="w-desc">${p[lang].desc}</p>`;
     }
+    card.type = "button";
     card.addEventListener("click", () => openModal(p.id));
     grid.appendChild(card);
   });
@@ -355,37 +351,70 @@ function renderWork() {
 /* ============================ modal ============================ */
 
 let openId = null;
+let lastFocus = null;
 const modal = document.getElementById("modal");
+const modalLink = document.getElementById("modalLink");
 
 function fillModal(id) {
   const p = PROJECTS.find(x => x.id === id);
   if (!p) return;
+  openId = id;
   const cat = CATEGORIES.find(c => c.id === p.cat);
   document.getElementById("modalImg").src = p.img;
   document.getElementById("modalImg").alt = p[lang].name;
-  document.getElementById("modalCat").textContent = cat[lang];
+  document.getElementById("modalCat").textContent = cat[lang] || cat.en;
   document.getElementById("modalTitle").textContent = p[lang].name;
   document.getElementById("modalDesc").textContent = p[lang].desc;
   const tags = document.getElementById("modalTags");
   tags.innerHTML = "";
   p.tags.forEach(t => { const li = document.createElement("li"); li.textContent = t; tags.appendChild(li); });
+  if (p.url) { modalLink.href = p.url; modalLink.hidden = false; }
+  else { modalLink.hidden = true; }
+  const i = PROJECTS.indexOf(p);
+  document.getElementById("modalCount").textContent =
+    String(i + 1).padStart(2, "0") + " / " + String(PROJECTS.length).padStart(2, "0");
+}
+function stepProject(dir) {
+  if (!openId) return;
+  const d = document.documentElement.dir === "rtl" ? -dir : dir;
+  const i = PROJECTS.findIndex(x => x.id === openId);
+  fillModal(PROJECTS[(i + d + PROJECTS.length) % PROJECTS.length].id);
+  document.querySelector(".modal-card").scrollTop = 0;
 }
 function openModal(id) {
-  openId = id;
+  lastFocus = document.activeElement;
   fillModal(id);
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+  document.getElementById("modalClose").focus();
 }
 function closeModal() {
+  if (!openId) return;
   openId = null;
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
 document.getElementById("modalClose").addEventListener("click", closeModal);
+document.getElementById("modalPrev").addEventListener("click", () => stepProject(-1));
+document.getElementById("modalNext").addEventListener("click", () => stepProject(1));
 modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+document.addEventListener("keydown", e => {
+  if (!openId) return;
+  if (e.key === "Escape") closeModal();
+  else if (e.key === "ArrowRight") stepProject(1);
+  else if (e.key === "ArrowLeft") stepProject(-1);
+  else if (e.key === "Tab") {
+    const f = [...modal.querySelectorAll("button,a")]
+      .filter(el => !el.hidden && el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
 
 /* ============================ toggles & links ============================ */
 
