@@ -1,7 +1,6 @@
 /* Mohammad Elhafi — editorial portfolio */
 
-/* TODO: set the real WhatsApp number (digits only, with country code) before launch */
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "971502634260";
 
 /* ============================ data ============================ */
 
