@@ -458,6 +458,85 @@ function observeReveals() {
   document.querySelectorAll(".reveal:not(.in)").forEach(el => io.observe(el));
 }
 
+/* ============================ wow layer ============================ */
+
+const finePointer = matchMedia("(pointer:fine)").matches;
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+(function initCursor() {
+  if (!finePointer || reduceMotion) return;
+  const dot = document.createElement("div"); dot.className = "cursor-dot";
+  const ring = document.createElement("div"); ring.className = "cursor-ring";
+  document.body.append(dot, ring);
+  document.documentElement.classList.add("cursor-on");
+  let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+  addEventListener("mousemove", e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + "px"; dot.style.top = my + "px";
+  });
+  (function loop() {
+    rx += (mx - rx) * .16; ry += (my - ry) * .16;
+    ring.style.left = rx + "px"; ring.style.top = ry + "px";
+    requestAnimationFrame(loop);
+  })();
+  addEventListener("mouseover", e => { if (e.target.closest("a,button")) ring.classList.add("grow"); });
+  addEventListener("mouseout", e => { if (e.target.closest("a,button")) ring.classList.remove("grow"); });
+})();
+
+(function initMagnetic() {
+  if (!finePointer || reduceMotion) return;
+  document.querySelectorAll(".btn").forEach(b => {
+    b.addEventListener("mousemove", e => {
+      const r = b.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width / 2) / r.width;
+      const y = (e.clientY - r.top - r.height / 2) / r.height;
+      b.style.transform = `translate(${x * 10}px,${y * 8}px)`;
+    });
+    b.addEventListener("mouseleave", () => { b.style.transform = ""; });
+  });
+})();
+
+(function initCountUp() {
+  if (reduceMotion) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      io.unobserve(en.target);
+      const b = en.target;
+      const m = b.textContent.match(/^(\d+)(.*)$/);
+      if (!m) return;
+      const end = +m[1], suf = m[2], t0 = performance.now();
+      (function tick(t) {
+        const p = Math.min((t - t0) / 1100, 1);
+        const e = 1 - Math.pow(1 - p, 3);
+        b.textContent = Math.round(end * e) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      })(t0);
+    });
+  }, { threshold: .5 });
+  document.querySelectorAll(".stat b").forEach(b => io.observe(b));
+})();
+
+(function initCardFx() {
+  if (!finePointer || reduceMotion) return;
+  const grid = document.getElementById("workGrid");
+  grid.addEventListener("mousemove", e => {
+    if (!matchMedia("(min-width:981px)").matches) return;
+    const card = e.target.closest(".wcard");
+    if (!card) return;
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    card.style.setProperty("--mx", (x * 100) + "%");
+    card.style.setProperty("--my", (y * 100) + "%");
+    card.style.transform = `perspective(900px) rotateX(${((y - .5) * -5).toFixed(2)}deg) rotateY(${((x - .5) * 5).toFixed(2)}deg)`;
+  });
+  grid.addEventListener("mouseout", e => {
+    const card = e.target.closest(".wcard");
+    if (card && !card.contains(e.relatedTarget)) card.style.transform = "";
+  });
+})();
+
 /* ============================ init ============================ */
 applyLang();
 observeReveals();
