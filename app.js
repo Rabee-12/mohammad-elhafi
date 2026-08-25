@@ -14,10 +14,10 @@ const CATEGORIES = [
 
 const PROJECTS = [
   { id:"klyro", cat:"agency", img:"assets/work/klyro.png",
-    en:{ name:"Klyro", desc:"My studio. Digital menus and websites for cafés and restaurants across Turkey and the Gulf — multilingual, mobile-first, and built to sell. This very site is Klyro v1." },
-    ar:{ name:"كليرو", desc:"استوديو الخاص. قوائم رقمية ومواقع للمقاهي والمطاعم في تركيا والخليج — متعددة اللغات، بجوال أولاً، ومصممة لتبيع." },
-    tr:{ name:"Klyro", desc:"Benim stüdyom. Türkiye ve Körfez'deki kafeler ve restoranlar için dijital menüler ve web siteleri — çok dilli, mobil öncelikli ve satmak için tasarlandı." },
-    tags:["Founder","Agency","Klyro v1"] },
+    en:{ name:"Klyro", desc:"My SaaS platform. An AI assistant wired into a CRM — replies to customers on WhatsApp and Instagram in seconds, captures every lead and organizes the pipeline, 24/7." },
+    ar:{ name:"كليرو", desc:"منصتي البرمجية. مساعد ذكي مدمج مع نظام CRM — يرد على العملاء عبر واتساب وإنستغرام في ثوانٍ، ويسجّل كل عميل محتمل وينظّم خط البيع، على مدار الساعة." },
+    tr:{ name:"Klyro", desc:"Benim SaaS platformum. Bir CRM'e bağlı yapay zekâ asistanı — müşterilere WhatsApp ve Instagram'da saniyeler içinde yanıt verir, her potansiyel müşteriyi kaydeder ve satış hattını yönetir, 7/24." },
+    tags:["Founder","SaaS","AI · WhatsApp"] },
   { id:"kickfit", cat:"fitness", img:"assets/work/kickfit.png",
     en:{ name:"Kickfit", desc:"A premium gym in Başakşehir led by a European kickboxing champion — dark and gold luxury, trilingual with full RTL, built to sell memberships." },
     ar:{ name:"كيك فيت", desc:"نادٍ رياضي فاخر في باشاك شهير يقوده بطل أوروبا في الكيك بوكسينغ — فخامة بالأسود والذهبي، ثلاثي اللغات بدعم كامل للعربية." },
