@@ -9,9 +9,15 @@ const CATEGORIES = [
   { id: "shops",  en: "E-Commerce",          ar: "متاجر إلكترونية", tr: "E-Ticaret" },
   { id: "fitness",en: "Fitness",             ar: "لياقة", tr: "Fitness" },
   { id: "cars",   en: "Car Rental",          ar: "تأجير سيارات", tr: "Araç Kiralama" },
+  { id: "agency", en: "Agency",              ar: "وكالة", tr: "Ajans" },
 ];
 
 const PROJECTS = [
+  { id:"klyro", cat:"agency", img:"assets/work/klyro.png",
+    en:{ name:"Klyro", desc:"My studio. Digital menus and websites for cafés and restaurants across Turkey and the Gulf — multilingual, mobile-first, and built to sell. This very site is Klyro v1." },
+    ar:{ name:"كليرو", desc:"استوديو الخاص. قوائم رقمية ومواقع للمقاهي والمطاعم في تركيا والخليج — متعددة اللغات، بجوال أولاً، ومصممة لتبيع." },
+    tr:{ name:"Klyro", desc:"Benim stüdyom. Türkiye ve Körfez'deki kafeler ve restoranlar için dijital menüler ve web siteleri — çok dilli, mobil öncelikli ve satmak için tasarlandı." },
+    tags:["Founder","Agency","Klyro v1"] },
   { id:"kickfit", cat:"fitness", img:"assets/work/kickfit.png",
     en:{ name:"Kickfit", desc:"A premium gym in Başakşehir led by a European kickboxing champion — dark and gold luxury, trilingual with full RTL, built to sell memberships." },
     ar:{ name:"كيك فيت", desc:"نادٍ رياضي فاخر في باشاك شهير يقوده بطل أوروبا في الكيك بوكسينغ — فخامة بالأسود والذهبي، ثلاثي اللغات بدعم كامل للعربية." },
@@ -119,7 +125,7 @@ const SKILLS = [
 
 const I18N = {
   en: {
-    "tb.loc":"Dubai, UAE — 25.2°N 55.3°E",
+    "tb.loc":"Dubai, UAE",
     "nav.work":"Work","nav.about":"About","nav.services":"Services","nav.contact":"Contact",
     "hero.kicker":"Open for projects — worldwide",
     "hero.l1":"Cybersecurity,","hero.l2":"design","hero.amp":" & ","hero.l3":"AI.",
@@ -156,7 +162,7 @@ const I18N = {
     "ticker":["Websites","E-Commerce","QR Menus","Cybersecurity","AI Content","Arabic + English","Dubai → the world"],
   },
   ar: {
-    "tb.loc":"دبي، الإمارات — °25.2 شمالاً °55.3 شرقاً",
+    "tb.loc":"دبي، الإمارات",
     "nav.work":"الأعمال","nav.about":"عنّي","nav.services":"الخدمات","nav.contact":"تواصل",
     "hero.kicker":"متاح للمشاريع — حول العالم",
     "hero.l1":"أمن سيبراني،","hero.l2":"تصميم","hero.amp":" و","hero.l3":"ذكاء اصطناعي.",
@@ -193,7 +199,7 @@ const I18N = {
     "ticker":["مواقع","متاجر إلكترونية","قوائم QR","أمن سيبراني","محتوى ذكاء اصطناعي","عربي + إنجليزي","من دبي إلى العالم"],
   },
   tr: {
-    "tb.loc":"Dubai, BAE — 25.2°N 55.3°E",
+    "tb.loc":"Dubai, BAE",
     "nav.work":"İşler","nav.about":"Hakkımda","nav.services":"Hizmetler","nav.contact":"İletişim",
     "hero.kicker":"Projelere açığım — dünyanın her yerinden",
     "hero.l1":"Siber güvenlik,","hero.l2":"tasarım","hero.amp":" ve ","hero.l3":"YZ.",
