@@ -1,6 +1,6 @@
 /* Mohammad Elhafi — editorial portfolio */
 
-const WHATSAPP_NUMBER = "971502634260";
+const WHATSAPP_NUMBER = "971502634260"; // +971 50 263 4260
 
 /* ============================ data ============================ */
 
@@ -454,16 +454,49 @@ document.querySelectorAll("#langToggle span[data-lang]").forEach(s =>
       saveLang();
     }));
 
-(function initWa() {
+(function initContactCard() {
   const email = "mohamadhafee11" + "@" + "gmail.com";
-  const href = WHATSAPP_NUMBER
-    ? "https://wa.me/" + WHATSAPP_NUMBER.replace(/\D/g, "") +
-      "?text=" + encodeURIComponent("Hi Mohammad! I saw your portfolio.")
-    : "mailto:" + email;
-  const wa1 = document.getElementById("waLink");
-  const wa2 = document.getElementById("waLink2");
-  if (WHATSAPP_NUMBER) { wa1.target = wa2.target = "_blank"; wa1.rel = wa2.rel = "noopener"; }
-  wa1.href = wa2.href = href;
+  const phone = "+971 50 263 4260";
+  const vcard = [
+    "BEGIN:VCARD", "VERSION:3.0", "FN:Mohammad Elhafi",
+    "N:Elhafi;Mohammad;;;", "TITLE:Cybersecurity Student | Web Developer | AI Content Creator",
+    "ORG:Klyro", "TEL;TYPE=CELL:" + phone, "EMAIL;TYPE=WORK:" + email,
+    "URL:https://mohammadelhafi.me/", "URL;TYPE=Instagram:https://www.instagram.com/mohammad.elhafi/",
+    "URL;TYPE=LinkedIn:https://www.linkedin.com/in/mohammad-elhafi/",
+    "END:VCARD"
+  ].join("\r\n");
+  const cardHref = URL.createObjectURL(new Blob([vcard], { type: "text/vcard;charset=utf-8" }));
+  [document.getElementById("waLink"), document.getElementById("waLink2")].forEach(link => {
+    if (!link) return;
+    link.classList.add("contact-card-link");
+    link.removeAttribute("data-i18n");
+    link.textContent = "Save my contact";
+  });
+  const heroLink = document.getElementById("waLink");
+  if (heroLink) {
+    const call = document.createElement("a");
+    call.className = "btn btn-line phone-link";
+    call.href = "tel:+971502634260";
+    call.textContent = "Call me";
+    heroLink.insertAdjacentElement("afterend", call);
+  }
+  const footerLink = document.getElementById("waLink2");
+  if (footerLink) {
+    const call = document.createElement("a");
+    call.className = "btn btn-lineinv phone-link";
+    call.href = "tel:+971502634260";
+    call.textContent = "+971 50 263 4260";
+    footerLink.insertAdjacentElement("afterend", call);
+  }
+  document.querySelectorAll(".contact-card-link").forEach(link => {
+    link.href = cardHref;
+    link.download = "Mohammad-Elhafi.vcf";
+    link.setAttribute("aria-label", "Save Mohammad Elhafi as a contact");
+  });
+  document.querySelectorAll(".phone-link").forEach(link => {
+    link.href = "tel:+971502634260";
+    link.setAttribute("aria-label", "Call Mohammad Elhafi at +971 50 263 4260");
+  });
   const mail = document.getElementById("mailLink");
   mail.href = "mailto:" + email;
   mail.textContent = email;
