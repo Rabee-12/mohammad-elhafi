@@ -5,6 +5,7 @@ const WHATSAPP_NUMBER = "971502634260"; // +971 50 263 4260
 /* ============================ data ============================ */
 
 const CATEGORIES = [
+  { id: "nfc",    en: "NFC Smart Cards",    ar: "بطاقات NFC الذكية", tr: "NFC Akıllı Kartlar" },
   { id: "menus",  en: "Menus & Restaurants", ar: "قوائم ومطاعم", tr: "Menüler & Restoranlar" },
   { id: "shops",  en: "E-Commerce",          ar: "متاجر إلكترونية", tr: "E-Ticaret" },
   { id: "fitness",en: "Fitness",             ar: "لياقة", tr: "Fitness" },
@@ -13,6 +14,11 @@ const CATEGORIES = [
 ];
 
 const PROJECTS = [
+  { id:"nfc-smart-cards", cat:"nfc", img:"assets/work/nfc-smart-cards.png",
+    en:{ name:"NFC Smart Cards", desc:"Tap-ready physical cards for frictionless digital actions — helping customers follow a brand on Instagram or leave a Google review without searching, typing or downloading an app." },
+    ar:{ name:"بطاقات NFC الذكية", desc:"بطاقات ذكية تعمل بلمسة واحدة لتسهيل التفاعل الرقمي — تتيح للعملاء متابعة العلامة على إنستغرام أو كتابة تقييم على Google دون بحث أو كتابة أو تنزيل تطبيق." },
+    tr:{ name:"NFC Akıllı Kartlar", desc:"Tek dokunuşla dijital etkileşim sağlayan fiziksel kartlar — müşteriler arama yapmadan, yazmadan veya uygulama indirmeden Instagram'da takip edebilir ya da Google yorumu bırakabilir." },
+    tags:["NFC","Google Reviews","Instagram"] },
   { id:"klyro", cat:"agency", img:"assets/work/klyro.png",
     en:{ name:"Klyro", desc:"My SaaS platform. An AI assistant wired into a CRM — replies to customers on WhatsApp and Instagram in seconds, captures every lead and organizes the pipeline, 24/7." },
     ar:{ name:"كليرو", desc:"منصتي البرمجية. مساعد ذكي مدمج مع نظام CRM — يرد على العملاء عبر واتساب وإنستغرام في ثوانٍ، ويسجّل كل عميل محتمل وينظّم خط البيع، على مدار الساعة." },
